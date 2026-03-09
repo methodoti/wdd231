@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WDD 231 | Web Frontend Development I - Marcelo Severo Patricio</title>
+        <meta name="description" content="WDD 231: Web Frontend Development I - Marcelo Severo Patricio">
+        <meta name="author" content="Marcelo Severo Patricio">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/larger.css">
+        <script src="scripts/course.js" defer></script>
+        <script src="scripts/date.js" defer></script>
+        <script src="scripts/navigation.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <img src="images/mspatricio.svg" alt="Site Logo" width="1" height="1" />
+            <span>Marcelo Severo Patricio</span>
+            <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+        </header>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li class="current"><a href="#">Home</a></li>
+                <li><a href="#">Chamber Project</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Home</h1>
+            <section class="about">
+                <h2>About Me</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At doloribus hic id, laudantium veniam quisquam nulla, illum deserunt, quas accusantium saepe voluptatum? Ut, quo? Odio laboriosam quaerat accusamus ut sequi!</p>
+            </section>
+            <section class="student-photo">
+                <h2>Student Photo</h2>
+                <img src="images/profile.webp" alt="profile picture" />
+            </section>
+                
+            <section class="courses">
+                <h2>Web Certificate Courses</h2>
+                
+                <div>
+                    <button type="button" id="all" class="button-courses">All Courses</button>
+                    <button type="button" id="wdd" class="button-courses">WDD Courses</button>
+                    <button type="button" id="cse" class="button-courses">CSE Courses</button>
+                </div>
+                <span id="num-courses"></span>
+
+            </section>
+        </main>
+        <footer>
+            <div class="social">
+                <a href="https://github.com/methodoti/" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
+                <a href="https://www.linkedin.com/in/mspatricio/" target="_blank"><img id="link" src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
+                <a href="https://www.facebook.com/mspatricio" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16" height="16"></a>
+                <a href="https://x.com/mspatricio" target="_blank"><img src="images/twitter-x.svg" alt="twitter" width="16" height="16"></a>
+            </div>
+            <div class="copyright">
+                <p>©<span id="currentyear"></span> | Marcelo Severo Patricio | Brazil</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </footer>
+    </body>
+</html>

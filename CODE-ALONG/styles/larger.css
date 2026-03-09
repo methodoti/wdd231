@@ -1,0 +1,36 @@
+@media screen and (min-width: 38rem) { /* 38 x 16 (padrão) = 608px*/ 
+    
+    header, main, nav, footer {
+        max-width: 900px;
+        margin: 0 auto; /* center */
+    }
+
+    header {
+        grid-template-columns: 24px auto;
+    }
+    
+    /**************** HAMBURGER ****************/
+    .hamburger {
+        display: none;
+    }
+
+    
+    /**************** NAVIGATION ****************/
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+    }
+
+    .navigation li {
+        flex: 1 1 100%;
+    }
+
+    .navigation a {
+        border: none;
+    }
+
+
+}

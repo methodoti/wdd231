@@ -1,0 +1,200 @@
+:root {
+    /* 
+    ---------------- COLOR SCHEME ----------------
+
+       =========================================
+       LEVEL 1: The Raw Palette (Your Brand Book)
+       ========================================= */
+    --c-baltic-blue: #09579D;   /* Main Blue */
+    --c-graphite: #333333;      /* Dark Gray */
+    --c-coral-pink: #E97D84;    /* Accent Pink */
+    --c-frozen-water: #CDF7F6;  /* Light Aqua/Teal */
+    --c-baby-blue: #8FB8DE;     /* Secondary Blue */
+    --c-white: #FFFFFF;         /* Pure White */
+
+    /* =========================================
+       LEVEL 2: The Semantic Pattern (The site's "Outfit")
+       ========================================= */
+
+
+    /* 1. GENERAL BACKGROUNDS */
+    --bg-main: var(--c-white);                  /* Full page background */
+    --bg-header: var(--c-frozen-water);         /* Main header background */
+    --bg-footer: var(--c-frozen-water);         /* Footer background */
+    --bg-card: var(--c-white);                  /* Background for the Course Cards */
+    
+
+    /* 2. NAVIGATION (Menu) */
+    --bg-nav: var(--c-baltic-blue);             /* Navigation bar background */
+    --bg-nav-hover: var(--c-coral-pink);        /* Hover background for links */
+    --bg-nav-active: var(--c-baby-blue);        /* WAYFINDING! Highlight for the current page */
+    --text-nav: var(--c-white);                 /* Text on menus */
+
+    /* 3. TYPOGRAPHY (Texts) */
+    --text-primary: var(--c-graphite);          /* Normal texts and headings (high contrast) */
+    --text-secondary: var(--c-baltic-blue);     /* Subheadings (Baltic blue gives better contrast than baby-blue) */
+    --text-on-dark: var(--c-white);             /* Text to be read on dark backgrounds */
+
+    /* 4. UI ELEMENTS & BORDERS */
+    --border-color-primary: var(--c-graphite);  /* For 2px button menus */
+    --border-color-accent: var(--c-baby-blue);  /* For menu division */
+
+    /* 5. ACTION, BRAND & DYNAMIC DATA (JavaScript) */
+    --color-primary: var(--c-baltic-blue);      /* Main brand color */
+    --color-accent: var(--c-coral-pink);        /* Buttons, links, hover states */
+    --color-completed: var(--c-baltic-blue);    /* Highlight for "Completed" courses in JS */
+}
+
+/* ---------------- COLOR SCHEME ----------------
+Logo Color:
+Baltic Blue: #336699
+Charcoal: #4D4D4D
+Baby Pink: #FF99CC
+
+Extra Color:
+Champagne Mist: #FFEAD0
+Frozen Lake: #6CD4FF
+
+320px <-------------------->1600px
+*/
+
+/**************** SITE ****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+/**************** HEADER ****************/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px; /* 44px is the minimal for touch devices */
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    gap: 8px;
+    height: 50px; /* trying to stop moving the title verticaly*/
+    background-color: var(--bg-header);
+    border-bottom: 2px solid var(--border-color-primary);
+}
+
+header img {
+    display: block; /* by default, images are display: inline */
+    width: 100%;
+    height: auto;
+    padding-bottom: 3px;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    font-family: "Montserrat Alternates", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+/**************** HAMBURGER ****************/
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+    color: var(--text-primary);
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/**************** NAVIGATION ****************/
+.navigation {
+    display: none;
+    font-family: sans-serif;
+    border-bottom: 2px solid var(--border-color-primary);
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none; /* remove bullets */
+    margin: 0; /* <ul> comes with margin by default */
+    padding: 0; /* and padding too */ 
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px; /* .8rem is close to 44px for touch screen */
+    text-align: center;
+    text-decoration: none; /* remove the underline from links */ 
+    border-bottom: 1px solid var(--border-color-accent);
+    background-color: var(--bg-nav);
+    color: var(--text-nav);
+}
+
+.navigation a:hover {
+    background-color: var(--bg-nav-hover);
+}
+
+/* li.current { 
+    background-color: var(--bg-nav-active); 
+} */
+
+.navigation li.current a { 
+    color: var(--text-on-dark);
+    font-weight: bold;
+}
+
+.current a::before {
+    /* content: "📍"; */
+        content: "♦️";
+        content: "🔻";
+        /* content: "🔺"; */
+        /* content: " •"; */
+}
+
+/**************** FOOTER ****************/
+footer {
+    background-color: var(--bg-footer);
+    color: var(--text-primary);
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+footer a {
+    margin-bottom: 0;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+    
+    /* padding: 1rem 10px; */
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: var(--color-primary) solid 1px;
+    border-radius: 22px;
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+}
+
+.social a:hover {
+    background-color: var(--bg-nav-hover);
+}

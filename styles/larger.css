@@ -1,0 +1,65 @@
+@media screen and (min-width: 600px) {
+    header, main, nav, footer {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /**************** HEADER ****************/
+    header {
+        grid-template-columns: 60px auto;
+    }
+
+    /**************** HAMBURGER ****************/
+    .hamburger {
+        display: none;
+    }
+
+    /**************** NAVIGATION ****************/
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+    }
+
+    .navigation li {
+        min-width: 100px;
+        /* flex: 1 1 100%; */
+    }
+
+    .navigation a {
+        border: none;
+        text-align: left;
+    }
+
+    /**************** MAIN ****************/
+
+    h1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    main {
+        /* padding: 1rem 10px; */
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    main .about {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    }
+
+    main .student-photo {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+    main .courses {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+}
