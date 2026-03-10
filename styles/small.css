@@ -1,6 +1,6 @@
 :root {
     /* 
-    ---------------- COLOR SCHEME ----------------
+    ---------------- MY COLOR SCHEME ----------------
 
        =========================================
        LEVEL 1: The Raw Palette (Your Brand Book)
@@ -8,6 +8,7 @@
     --c-baltic-blue: #09579D;       /* Main Blue */
     --c-graphite: #333333;          /* Dark Gray */
     --c-coral-pink: #E97D84;        /* Accent Pink */
+    --c-coral-pink: #F6CBCE;
     --c-frozen-water: #CDF7F6;      /* Light Aqua/Teal */
     --c-pale-sky: #B0CDE8;           /* Secondary Blue */
     --c-white: #FFFFFF;             /* Pure White */
@@ -21,7 +22,7 @@
     --bg-main: var(--c-white);                  /* Full page background */
     --bg-header: var(--c-frozen-water);         /* Main header background */
     --bg-footer: var(--c-pale-sky);         /* Footer background */
-    --bg-card: var(--c-white);                  /* Background for the Course Cards */
+    --bg-card: var(--c-frozen-water);                  /* Background for the Course Cards */
     --bg-section: var(--c-pale-sky); 
 
 
@@ -43,7 +44,7 @@
     /* 5. ACTION, BRAND & DYNAMIC DATA (JavaScript) */
     --color-primary: var(--c-baltic-blue);      /* Main brand color */
     --color-accent: var(--c-coral-pink);        /* Buttons, links, hover states */
-    --color-completed: var(--c-baltic-blue);    /* Highlight for "Completed" courses in JS */
+    --color-completed: var(--c-pale-sky);    /* Highlight for "Completed" courses in JS */
 }
 
 /**************** SITE ****************/
@@ -53,15 +54,11 @@
 
 body {
     background-color: var(--bg-main);
-    /* font-family: Roboto, Helvetica, sans-serif; */
 }
 
 h1 {
     font-family: "Montserrat Alternates", Arial, Helvetica, sans-serif;  
     color: var(--color-primary);
-    /* margin-bottom: 0; */
-    /* grid-column-start: 1;
-    grid-column-end: 4; */
 }
 
 h2 {
@@ -81,19 +78,16 @@ header, main, nav, footer {
 header {
     display: grid;
     grid-template-columns: 60px auto 44px;
-    /* 44px is the minimal for touch devices */
     padding: 5px 0 5px 10px;
     align-items: center;
     gap: 8px;
     height: 70px;
-    /* trying to stop moving the title verticaly*/
     background-color: var(--bg-mainheader);
     border-bottom: 2px solid var(--border-color-primary);
 }
 
 header img {
     display: block;
-    /* by default, images are display: inline */
     width: 100%;
     height: auto;
     padding-bottom: 3px;
@@ -148,43 +142,35 @@ header span {
     text-align: left;
     text-decoration: none;
     border-bottom: 1px solid var(--border-color-accent);
-    /* background-color: var(--bg-nav); */
     color: var(--text-nav);
 }
 
+
+
 .navigation a:hover {
     background-color: var(--bg-nav-hover);
+    color: var(--text-primary);
 }
 
-/* li.current { 
-    background-color: var(--bg-nav-active); 
-} */
-
-.navigation li.current a {
+li.current a {
     color: var(--text-on-dark);
     font-weight: bold;
 }
 
 .current a::after {
-    content: "🔻";
+    content: "🔺";
 }
 
 /**************** MAIN ****************/
 main {
     padding: 0 10px;
-    /* display: grid; */
     display: flex;
     flex-direction: column;
     gap: 15px;
-    /* grid-template-columns: 1fr; */
 }
 
 main h1 {
-    /* font-family: "Montserrat Alternates", Arial, Helvetica, sans-serif; */
-    /* color: var(--color-primary); */
     margin-bottom: 0;
-    /* grid-column-start: 1;
-    grid-column-end: 4; */
 }
 
 main h2 {
@@ -215,17 +201,17 @@ main .student-photo img {
 }
 
 main .courses {
-    /* padding: 0 10px; */
-    background-color: var(--bg-card);
+    background-color: var(--bg-main);
 }
 
+/*/////////////// Courses ////////////////////////////////*/
 main .courses div {
     display: flex;
     justify-content: space-between;
     padding: 10px;
 }
 
-main .courses #num-courses {
+main .courses .numCredits {
     font-family: Roboto, Helvetica, sans-serif;
     color: var(--text-primary);
     font-weight: bold;
@@ -235,37 +221,58 @@ main .courses #num-courses {
 }
 
 main .button-courses {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--bg-nav);
     color: var(--text-nav);
+    border-radius: 7px;
     height: 44px;
     width: 30%;
-    min-width: 120px;
-    
-    /* margin: 1rem 0; */
-    border-radius: 5px;
+    min-width: 100px;
 }
 
 main .button-courses:hover {
     background-color: var(--bg-nav-hover);
+    color: var(--text-primary);
 }
 
 main .button-courses.active {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--bg-nav-hover);
+    /* font-weight: bold; */
+    /* font-size: 1.5rem; */
+    color: var(--text-primary);
 }
 
+main div.arraySubject {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
+main .subjectCards {
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color-primary);
+    border-radius: 2px;
+    height: 40px;
+    min-width: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+main .subjectCompleted {
+    background-color: var(--color-completed);
+}
 
 
 /**************** FOOTER ****************/
 footer {
     color: var(--text-primary);
-    /* padding: 1rem 10px; */
     text-align: center;
 }
-
-/* footer a {
-    margin-bottom: 0;
-} */
 
 .social {
     display: flex;
@@ -281,18 +288,12 @@ footer {
     align-items: center;
     width: 44px;
     height: 44px;
-    /* border: var(--color-primary) solid 1px;
-    border-radius: 22px; */
 }
 
 .social img {
     width: 44px;
     height: 44px;
 }
-
-/* .social a:hover {
-    background-color: var(--bg-nav-hover);
-} */
 
 .copyright {
     background-color: var(--bg-footer);
@@ -302,4 +303,8 @@ footer {
 .copyright p {
     margin: 0;
     padding-bottom: 1rem;
+}
+
+#myName {
+    font-weight: bold;
 }

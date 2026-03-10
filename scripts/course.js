@@ -79,22 +79,77 @@ const courses = [
 ]
 
 const button = document.querySelectorAll(".button-courses");
-const numCourses = document.querySelector("#num-courses");
+const numCredits = document.querySelector("#num-credits");
 
-numCourses.textContent = "The total credits for course listed above is";
+
+let courseToFilter = "All"
+let filteredCourses = courses.filter(filterCourse);
+button[0].classList.add("active");
+
+cardCourse();
 
 for (let index = 0; index < button.length; index++) {
     const element = button[index];
     element.addEventListener("click", function () {
-        element.classList.toggle("active");
-        numCourses.textContent = `The total credits for course listed above is ${element.id}`;
+        switch (element.textContent) {
+            case "All":
+                courseToFilter = element.textContent;
+                element.classList.add("active");
+                button[1].classList.remove("active");
+                button[2].classList.remove("active");
+                filteredCourses = courses.filter(filterCourse);
+                cardCourse();
+                break;
+            case "WDD":
+                courseToFilter = element.textContent;
+                element.classList.add("active");
+                button[0].classList.remove("active");
+                button[2].classList.remove("active");
+                filteredCourses = courses.filter(filterCourse);
+                cardCourse();
+                break;
+            case "CSE":
+                courseToFilter = element.textContent;
+                element.classList.add("active");
+                button[0].classList.remove("active");
+                button[1].classList.remove("active");   
+                filteredCourses = courses.filter(filterCourse);
+                cardCourse();
+                break;
+            default:
+                break;
+        }
     });
 }
 
-// Seleciona todos os ícones sociais
-// document.querySelectorAll('.social img').forEach(img => {
-//     img.style.color = '#ff0000';
-// });
+function cardCourse() {
+    const arraySubject = document.querySelector("#array-subject");
+    arraySubject.innerHTML = "";
+    
+    const totalCredits = filteredCourses.reduce(function (acumulator, course) {
+        return acumulator + course.credits;
+    }, 0);
 
-// const linkedin = document.querySelector("#link");
-// linkedin.style.color = "red";
+    for (let index = 0; index < filteredCourses.length; index++) {
+        const element = filteredCourses[index].subject;
+
+        const subjects = document.createElement("span");
+        subjects.classList.add("subjectCards");
+        if (filteredCourses[index].completed) {
+                subjects.classList.add("subjectCompleted");
+            subjects.textContent = `✓ ${filteredCourses[index].subject} ${filteredCourses[index].number}`;
+            } else {
+            subjects.textContent = `${filteredCourses[index].subject} ${filteredCourses[index].number}`;
+            }
+        arraySubject.append(subjects);
+    }
+    numCredits.textContent = `The total credits for course listed above is ${totalCredits}`;
+}
+
+function filterCourse(course) {
+    if (courseToFilter === "All") {
+        return courses;
+    } else {
+        return course.subject === courseToFilter;
+    }
+}

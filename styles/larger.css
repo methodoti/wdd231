@@ -25,7 +25,6 @@
 
     .navigation li {
         min-width: 100px;
-        /* flex: 1 1 100%; */
     }
 
     .navigation a {
@@ -60,6 +59,16 @@
     main .courses {
         grid-column-start: 1;
         grid-column-end: 4;
+    }
+
+    main div.arraySubject {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    main .subjectCards {
+        width: 30%;
     }
 
 }
