@@ -7,8 +7,7 @@
        ========================================= */
     --c-baltic-blue: #09579D;       /* Main Blue */
     --c-graphite: #333333;          /* Dark Gray */
-    --c-coral-pink: #E97D84;        /* Accent Pink */
-    --c-coral-pink: #F6CBCE;
+    --c-coral-pink: #F6CBCE;        /* Accent Pink */
     --c-frozen-water: #CDF7F6;      /* Light Aqua/Teal */
     --c-pale-sky: #B0CDE8;           /* Secondary Blue */
     --c-white: #FFFFFF;             /* Pure White */
@@ -21,16 +20,16 @@
     /* 1. GENERAL BACKGROUNDS */
     --bg-main: var(--c-white);                  /* Full page background */
     --bg-header: var(--c-frozen-water);         /* Main header background */
-    --bg-footer: var(--c-pale-sky);         /* Footer background */
-    --bg-card: var(--c-frozen-water);                  /* Background for the Course Cards */
+    --bg-footer: var(--c-pale-sky);             /* Footer background */
+    --bg-card: var(--c-frozen-water);           /* Background for the Course Cards */
     --bg-section: var(--c-pale-sky); 
 
 
     /* 2. NAVIGATION (Menu) */
-    --bg-nav: var(--c-baltic-blue);         /* Navigation bar background */
-    --bg-nav-hover: var(--c-coral-pink);    /* Hover background for links */
-    --bg-nav-active: var(--c-pale-sky);    /* WAYFINDING! Highlight for the current page */
-    --text-nav: var(--c-white);             /* Text on menus */
+    --bg-nav: var(--c-baltic-blue);             /* Navigation bar background */
+    --bg-nav-hover: var(--c-coral-pink);        /* Hover background for links */
+    --bg-nav-active: var(--c-pale-sky);         /* WAYFINDING! Highlight for the current page */
+    --text-nav: var(--c-white);                 /* Text on menus */
 
     /* 3. TYPOGRAPHY (Texts) */
     --text-primary: var(--c-graphite);          /* Normal texts and headings (high contrast) */
@@ -38,13 +37,13 @@
     --text-on-dark: var(--c-white);             /* Text to be read on dark backgrounds */
 
     /* 4. UI ELEMENTS & BORDERS */
-    --border-color-primary: var(--c-graphite);    /* For 2px button menus */
+    --border-color-primary: var(--c-graphite);   /* For 2px button menus */
     --border-color-accent: var(--c-pale-sky);    /* For menu division */
 
     /* 5. ACTION, BRAND & DYNAMIC DATA (JavaScript) */
     --color-primary: var(--c-baltic-blue);      /* Main brand color */
     --color-accent: var(--c-coral-pink);        /* Buttons, links, hover states */
-    --color-completed: var(--c-pale-sky);    /* Highlight for "Completed" courses in JS */
+    --color-completed: var(--c-pale-sky);       /* Highlight for "Completed" courses in JS */
 }
 
 /**************** SITE ****************/
@@ -82,7 +81,7 @@ header {
     align-items: center;
     gap: 8px;
     height: 70px;
-    background-color: var(--bg-mainheader);
+    background-color: var(--bg-main);
     border-bottom: 2px solid var(--border-color-primary);
 }
 
