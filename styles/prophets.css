@@ -1,0 +1,118 @@
+:root {
+/* 
+    ---------------- MY COLOR SCHEME ----------------
+
+    => https://coolors.co/41431b-aeb784-e3dbbb-f8f3e1
+
+    =========================================
+    LEVEL 1: The Raw Palette (Your Brand Book)
+    ========================================= */
+    --c-dark-khaki: rgb(65, 67, 27); 
+    --c-dry-sage: rgb(174, 183, 132);
+    --c-sand-dune: rgb(227, 219, 187);
+    --c-ivoy-mist: rgb(248, 243, 225);
+    --c-white: #FFFFFF;
+    --c-black: #000;
+
+
+/*  =========================================
+       LEVEL 2: The Semantic Pattern (The site's "Outfit")
+    ========================================= */
+
+
+    /* 1. GENERAL BACKGROUNDS */
+    --bg-main: var(--c-white); /* Full page background */
+    --bg-card: var(--c-ivoy-mist); /* Background for the Cards Div */
+    --bg-section: var(--c-sand-dune); /* Background for the Prophets section
+
+
+    /* 3. TYPOGRAPHY (Texts) */
+    --text-primary: var(--c-dark-khaki); /* Normal texts and headings (high contrast) */
+    --text-secondary: var(--c-dark-khaki); /* Subheadings  */
+    --text-paragraph: var(--c-black);
+    --text-on-dark: var(--c-white); /* Text to be read on dark backgrounds */
+
+    /* 4. UI ELEMENTS & BORDERS */
+    --border-color-primary: var(--c-dark-khaki); /* For the Cards Div */
+    --border-color-accent: var(--c-dark-khaki); /* For the Prophets section */
+    --shadow-color-primary: var(--c-black); /* Shadows */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header,
+main,
+footer {
+    min-width: 350px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+main {
+    min-height: 100vh /* for Lighthouse Layout shift culprits */
+}
+
+body {
+    margin: 5px;
+    background-color: var(--bg-main);
+}
+
+h1, h2 {
+    color: var(--text-primary);
+    text-align: center;
+    font-family: "Marko One", 'Times New Roman', Times, serif;
+}
+
+h2 {
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    color: var(--c-black);
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 5px;
+    padding: 10px;
+    justify-content: right;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* justify-items: center;  */
+    background-color: var(--bg-card);
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    margin: 5px;
+    padding: 5px;
+    /* min-width: 280px; */
+    /* max-width: 350px; */
+    border: 1px solid var(--border-color-primary);
+    background-color: var(--bg-section);
+}
+
+img {
+    width: 200px;
+    height: 260px;
+    object-fit: cover;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+}
+
+footer {
+    border-top: 1px solid black;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+}
