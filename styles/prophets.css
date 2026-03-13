@@ -5,7 +5,7 @@
     => https://coolors.co/41431b-aeb784-e3dbbb-f8f3e1
 
     =========================================
-    LEVEL 1: The Raw Palette (Your Brand Book)
+    LEVEL 1: The Raw Palette
     ========================================= */
     --c-dark-khaki: rgb(65, 67, 27); 
     --c-dry-sage: rgb(174, 183, 132);
@@ -91,8 +91,7 @@ section {
     align-items: center;    
     margin: 5px;
     padding: 5px;
-    /* min-width: 280px; */
-    /* max-width: 350px; */
+    
     border: 1px solid var(--border-color-primary);
     background-color: var(--bg-section);
 }
