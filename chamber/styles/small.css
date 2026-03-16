@@ -45,9 +45,9 @@
 
     /* 2. NAVIGATION */
     --nav-bg: var(--brand-primary);             /* Menu background */
-    --nav-text: var(--c-white);                 /* Menu text */
+    --nav-text: var(--brand-dark);                 /* Menu text */
     --nav-hover: var(--brand-accent);           /* Hover */
-    --nav-active: var(--brand-secondary);       /* WAYFINDING: current page */
+    --nav-active: var(--brand-light);           /* WAYFINDING: current page */
 
     /* 3. TYPOGRAPHY */
     --text-heading: var(--brand-dark);          /* Headers (h1, h2, h3) */
@@ -131,7 +131,8 @@ header span {
 .theme::before{
     content: "◐";
     font-size: 2rem;
-    color: var(--text-primary);    
+    color: var(--text-primary);
+    color: var(--brand-accent);    
 }
 
 .hamburger {
@@ -145,9 +146,50 @@ header span {
     content: "\2630";
     font-size: 2rem;
     color: var(--text-primary);
+    color: var(--brand-accent);
 }
 
 .hamburger.show::before {
     content: "\00D7";
 }
 
+/**************** NAVIGATION ****************/
+
+.navigation {
+    /* display: none; */
+    font-family: sans-serif;
+    background-color: var(--nav-bg);
+    /* background-color: var(--nav-hover); */
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    text-decoration: none;
+    text-align: right;
+    color: var(--text-on-dark);
+}
+
+.navigation a:hover {
+    background-color: var(--nav-hover);
+    color: var(--nav-text);
+}
+
+li.current a {
+    color: var(--nav-active);
+    font-weight: bold;
+}
+
+li.current a::before {
+    content: "🔺";
+}
