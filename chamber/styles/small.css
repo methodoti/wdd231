@@ -102,6 +102,7 @@ header {
     gap: 8px;
     height: 70px;
     background-color: var(--bg-header-footer);
+    border-bottom: 2px solid var(--border-main);
 }
 
 header img {
@@ -115,4 +116,38 @@ header span {
     font-family: Gelasio, 'Times New Roman', Times, serif;
     font-size: 1.2rem;
     color: var(--text-on-dark);
+    font-weight: bold;
 }
+
+/**************** HAMBURGER ****************/
+
+.theme {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.theme::before{
+    content: "◐";
+    font-size: 2rem;
+    color: var(--text-primary);    
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+    color: var(--text-primary);
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
