@@ -1,0 +1,118 @@
+:root {
+    /* 
+    /****************  MY COLOR SCHEME ****************
+    => https://coolors.co/0a0908-22333b-eae0d5-c6ac8f-5e503f
+    
+    =========================================
+    LEVEL 0: GLOBAL DICTIONARY
+    -----------------------------------------
+    Literal color names.
+    ========================================= */
+    --c-black: #0A0908;
+    --c-jet-black: #22333B;
+    --c-almond-cream: #EAE0D5;
+    --c-khaki-beige: #C6AC8F;
+    --c-stone-brown: #5E503F;
+    --c-pure-white: #FFFFFF;
+    --c-absolute-black: #000000;
+
+    /* =========================================
+    LEVEL 1: BRAND THEME
+    -----------------------------------------
+    Base color for the project.
+    ========================================= */
+    --brand-primary: var(--c-jet-black);            /* Primary brand color */
+    --brand-secondary: var(--c-stone-brown);        /* Secondary brand color/support */
+    --brand-accent: var(--c-khaki-beige);          /* Accent color/action (buttons) */
+
+    --brand-dark: var(--c-black);                   /* Dark text/Graphics */
+    --brand-light: var(--c-almond-cream);           /* Background Cards/Sections */
+
+    --c-white: #FFFFFF;
+    --c-black: #000000;
+
+    /* =========================================
+    LEVEL 2: SEMANTIC PATTERN
+    -----------------------------------------
+    This names never change! *adapt to my current project
+    ========================================= */
+
+    /* 1. BACKGROUNDS */
+    --bg-page: var(--c-white);                  /* Main Page background */
+    --bg-header-footer: var(--brand-secondary);    /* Top and Bottom brackground */
+    --bg-container: var(--brand-light);         /* Cards/sections background */
+    --bg-accent: var(--brand-primary);          /* Highlight area background */
+
+    /* 2. NAVIGATION */
+    --nav-bg: var(--brand-primary);             /* Menu background */
+    --nav-text: var(--c-white);                 /* Menu text */
+    --nav-hover: var(--brand-accent);           /* Hover */
+    --nav-active: var(--brand-secondary);       /* WAYFINDING: current page */
+
+    /* 3. TYPOGRAPHY */
+    --text-heading: var(--brand-dark);          /* Headers (h1, h2, h3) */
+    --text-body: var(--brand-dark);             /* Paragraphs and long texts */
+    --text-on-dark: var(--c-white);             /* Text over color/dark backgrounds */
+    --text-link: var(--brand-primary);          /* Text links */
+
+    /* 4. UI & DECORATION */
+    --border-main: var(--brand-dark);           /* Buttons/Divs border */
+    --border-soft: var(--brand-secondary);      /* Light division/Lines */
+    --shadow-main: rgba(0, 0, 0, 0.2);        /* Default Shadow */
+
+    /* 5. STATE & DYNAMIC (JavaScript/Action) */
+    --action-color: var(--brand-accent);        /* Call-to-action buttons */
+    --status-success: var(--brand-primary);     /* Completed/Right items */
+}
+
+/**************** SITE ****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+}
+
+h1 {
+    font-family: Gelasio, 'Times New Roman', Times, serif;
+    color: var(--color-primary);
+}
+
+h2 {
+    font-family: Gelasio, 'Times New Roman', Times, serif;
+}
+
+p {
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+header, main, nav, footer {
+    min-width: 320px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/**************** HEADER ****************/
+header {
+    display: grid;
+    grid-template-columns: 60px auto 44px 44px;
+    padding: 5px 0 5px 10px;
+    align-items: center;
+    gap: 8px;
+    height: 70px;
+    background-color: var(--bg-header-footer);
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* padding-bottom: 3px; */
+}
+
+header span {
+    font-family: Gelasio, 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    color: var(--text-on-dark);
+}
