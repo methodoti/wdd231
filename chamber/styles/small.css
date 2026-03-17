@@ -15,6 +15,7 @@
     --c-stone-brown: #5E503F;
     --c-pure-white: #FFFFFF;
     --c-absolute-black: #000000;
+    --cor: #b2b2b2;
 
     /* =========================================
     LEVEL 1: BRAND THEME
@@ -47,7 +48,7 @@
     --nav-bg: var(--brand-primary);             /* Menu background */
     --nav-text: var(--brand-dark);                 /* Menu text */
     --nav-hover: var(--brand-accent);           /* Hover */
-    --nav-active: var(--brand-light);           /* WAYFINDING: current page */
+    --nav-active: var(--c-white);           /* WAYFINDING: current page */
 
     /* 3. TYPOGRAPHY */
     --text-heading: var(--brand-dark);          /* Headers (h1, h2, h3) */
@@ -71,16 +72,12 @@
 }
 
 body {
-    background-color: var(--bg-main);
+    background-color: var(--bg-page);
 }
 
-h1 {
+h1, h2, h3 {
     font-family: Gelasio, 'Times New Roman', Times, serif;
-    color: var(--color-primary);
-}
-
-h2 {
-    font-family: Gelasio, 'Times New Roman', Times, serif;
+    color: var(--c-almond-cream);
 }
 
 p {
@@ -97,10 +94,10 @@ header, main, nav, footer {
 header {
     display: grid;
     grid-template-columns: 60px auto 44px 44px;
-    padding: 5px 0 5px 10px;
+    /* padding: 5px 0 5px 10px; */
     align-items: center;
-    gap: 8px;
-    height: 70px;
+    /* gap: 8px; */
+    /* height: 70px; */
     background-color: var(--bg-header-footer);
     border-bottom: 2px solid var(--border-main);
 }
@@ -109,42 +106,56 @@ header img {
     display: block;
     width: 100%;
     height: auto;
-    /* padding-bottom: 3px; */
+    margin: 5px 0 5px 10px;
 }
 
 header span {
     font-family: Gelasio, 'Times New Roman', Times, serif;
     font-size: 1.2rem;
     color: var(--text-on-dark);
+    color: var(--brand-light);
     font-weight: bold;
+    margin: 5px 0 5px 15px;
 }
 
 /**************** HAMBURGER ****************/
-
-.theme {
+.theme, .hamburger {
     background: none;
     border: none;
     cursor: pointer;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    /* for align the hamburguer e theme */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    height: 44px;
 }
 
 .theme::before{
     content: "◐";
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--text-primary);
     color: var(--brand-accent);    
 }
 
-.hamburger {
+/* .hamburger {
     background: none;
     border: none;
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+    
+    padding-bottom: 8px;
+} */
+
+/* .hamburger.show {
+    padding-bottom: 1px;
+} */
 
 .hamburger::before {
     content: "\2630";
     font-size: 2rem;
+    /* padding-bottom: 30px; */
     color: var(--text-primary);
     color: var(--brand-accent);
 }
@@ -154,11 +165,14 @@ header span {
 }
 
 /**************** NAVIGATION ****************/
-
 .navigation {
-    /* display: none; */
+    display: none;
     font-family: sans-serif;
     background-color: var(--nav-bg);
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    width: 100%;
     /* background-color: var(--nav-hover); */
 }
 
@@ -187,9 +201,63 @@ header span {
 
 li.current a {
     color: var(--nav-active);
+    /* color: var(--c-white); */
     font-weight: bold;
 }
 
 li.current a::before {
     content: "🔺";
+}
+
+/**************** MAIN ****************/
+main {
+    min-height: 30vh;
+}
+
+/**************** FOOTER ****************/
+footer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    color: var(--text-primary);
+    background-color: var(--bg-header-footer);
+    color: var(--c-white);
+}
+
+.chamber-info {
+    /* border: 2px dashed red; */
+    flex: 1;
+}
+
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    /* column-gap: 1.5rem; */
+    padding: 1rem 10px;
+    /* border: 2px dashed red; */
+    flex: 1;
+    
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    background-color: var(--c-jet-black);
+    border-radius: 50%;
+    width: 60px; 
+    height: 60px;
+}
+
+.social img {
+    width: 42px;
+    height: 42px;
+}
+
+.copyright {
+    /* border: 2px dashed red; */
+    flex: 1;
 }
