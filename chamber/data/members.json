@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "companyname": "Guaíba Tech Solutions",
+      "companyaddresses": "Rua dos Andradas, 1234 - Centro Histórico, Porto Alegre - RS",
+      "companyphonenumber": "(51) 3333-1000",
+      "companywebsiteurl": "www.guaibatech.com.br",
+      "imagefilename": "",
+      "membershiplevel": 3,
+      "sector": "Tecnologia da Informação"
+    },
+    {
+      "companyname": "Churrascaria Fogo & Tradição",
+      "companyaddresses": "Av. Ipiranga, 5000 - Praia de Belas, Porto Alegre - RS",
+      "companyphonenumber": "(51) 3222-2020",
+      "companywebsiteurl": "www.fogoetradicao.com.br",
+      "imagefilename": "",
+      "membershiplevel": 2,
+      "sector": "Alimentação"
+    },
+    {
+      "companyname": "Exata Contabilidade e Negócios",
+      "companyaddresses": "Av. Carlos Gomes, 700 - Auxiliadora, Porto Alegre - RS",
+      "companyphonenumber": "(51) 3030-4040",
+      "companywebsiteurl": "www.exatacontab.com.br",
+      "imagefilename": "",
+      "membershiplevel": 1,
+      "sector": "Financeiros"
+    },
+    {
+      "companyname": "Moinhos Design & Arquitetura",
+      "companyaddresses": "Rua Padre Chagas, 200 - Moinhos de Vento, Porto Alegre - RS",
+      "companyphonenumber": "(51) 3444-5050",
+      "companywebsiteurl": "www.moinhosdesign.com.br",
+      "imagefilename": "",
+      "membershiplevel": 3,
+      "sector": "Arquitetura e Design"
+    },
+    {
+      "companyname": "Pampa Logística e Transportes",
+      "companyaddresses": "Av. Sertório, 8000 - Sarandi, Porto Alegre - RS",
+      "companyphonenumber": "(51) 3555-6060",
+      "companywebsiteurl": "www.pampalog.com.br",
+      "imagefilename": "",
+      "membershiplevel": 2,
+      "sector": "Transporte"
+    },
+    {
+      "companyname": "Mercado Cidade Baixa",
+      "companyaddresses": "Rua João Alfredo, 300 - Cidade Baixa, Porto Alegre - RS",
+      "companyphonenumber": "(51) 3666-7070",
+      "companywebsiteurl": "www.mercadocb.com.br",
+      "imagefilename": "",
+      "membershiplevel": 1,
+      "sector": "Varejo"
+    },
+    {
+      "companyname": "Clínica Bem Estar Sul",
+      "companyaddresses": "Rua Ramiro Barcelos, 900 - Floresta, Porto Alegre - RS",
+      "companyphonenumber": "(51) 3777-8080",
+      "companywebsiteurl": "www.bemestarsul.com.br",
+      "imagefilename": "",
+      "membershiplevel": 3,
+      "sector": "Saúde"
+    }
+  ]
+}
