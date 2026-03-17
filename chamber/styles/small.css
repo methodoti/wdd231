@@ -139,18 +139,14 @@ header span {
     color: var(--brand-accent);    
 }
 
-/* .hamburger {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+.hamburger {
+   
     padding-bottom: 8px;
-} */
+}
 
-/* .hamburger.show {
-    padding-bottom: 1px;
-} */
+.hamburger.show {
+    padding-bottom: 5px;
+}
 
 .hamburger::before {
     content: "\2630";
@@ -206,7 +202,7 @@ li.current a {
 }
 
 li.current a::before {
-    content: "🔺";
+    content: "♦️";
 }
 
 /**************** MAIN ****************/
@@ -223,6 +219,7 @@ footer {
     gap: 10px;
     color: var(--text-primary);
     background-color: var(--bg-header-footer);
+    border-top: 2px solid var(--border-main);
     color: var(--c-white);
 }
 
