@@ -35,6 +35,26 @@
         text-align: center;
     }
 
+    /**************** MAIN ****************/
+    main {
+        padding: 10px;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+
+        section {
+            display: grid;
+            /* grid-template-columns: 1.5fr 1.5fr 1fr 1fr; */
+            grid-template-columns: 30% 30% 15% 25%;
+
+            /* white-space: nowrap; */
+            overflow: hidden;  /* hide the big text */
+            /* text-overflow: ellipsis; */
+        }
+    }
+
     /**************** FOOTER ****************/
     footer {
         flex-direction: row;

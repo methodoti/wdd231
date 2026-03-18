@@ -11,10 +11,14 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel="stylesheet" href="styles/small.css">
         <link rel="stylesheet" href="styles/larger.css">
         <script src="scripts/navigation.js" defer></script>
+        <script src="scripts/date.js" defer></script>
+        <script src="scripts/members.js" defer></script>
         <link rel="icon" href="favicon.ico">
 
         <meta property="og:title" content="Porto Alegre Chamber of Commerce - Business Directory.">
@@ -50,7 +54,11 @@
         </nav> -->
 
         <main>
-            <p>The main content of the directory page</p>
+            <div class="menu">
+                <button id="grid" class="menu-button" aria-label="grid"></button>
+                <button id="list" class="menu-button" aria-label="list"></button>
+	        </div>
+            <article class="members grid"></article>
         </main>
 
         <footer> 
