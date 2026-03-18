@@ -20,7 +20,7 @@ const displayMembers = (members) => {
         let address = document.createElement("p");
         let phone = document.createElement("p");
         let url = document.createElement("a")
-        let companyName = document.createElement("h3");
+        let companyName = document.createElement("h2");
 
 
         // build the h3 content out to show the member's company name
