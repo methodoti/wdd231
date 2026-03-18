@@ -37,8 +37,13 @@
 
     /**************** MAIN ****************/
     main {
-        padding: 20px 10px;
-        /* min-height: 30vh; */
+        padding: 10px 10px;
+
+    }
+
+    main h1 {
+        padding: 10px 0;
+        margin: 0;
     }
 
     .grid {

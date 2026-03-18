@@ -199,8 +199,13 @@ li.current a::before {
 
 /**************** MAIN ****************/
 main {
-    padding: 20px 0;
-    /* min-height: 70vh; */
+    padding: 10px 0;
+}
+
+main h1 {
+    color: var(--brand-primary);
+    padding: 10px;
+    margin: 0;
 }
 
 .menu {
@@ -211,7 +216,7 @@ main {
 }
 
 .menu-button {
-    font-family: "bootstrap-icons";
+    font-family: "Material Symbols Outlined";
     background: none;
     border: none;
     cursor: pointer;
@@ -236,11 +241,11 @@ main {
 }
 
 #grid::before {
-    content: "\F3F9";
+    content: "\e9b0";
 }
 
 #list::before {
-    content: "\F477";
+    content: "\e9b9";
 }
 
 .members {
