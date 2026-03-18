@@ -8,14 +8,12 @@
     -----------------------------------------
     Literal color names.
     ========================================= */
-    --c-black: #0A0908;
     --c-jet-black: #22333B;
     --c-almond-cream: #EAE0D5;
     --c-khaki-beige: #C6AC8F;
     --c-stone-brown: #5E503F;
     --c-pure-white: #FFFFFF;
     --c-absolute-black: #000000;
-    --cor: #b2b2b2;
 
     /* =========================================
     LEVEL 1: BRAND THEME
@@ -109,7 +107,6 @@ header img {
 header span {
     font-family: Gelasio, 'Times New Roman', Times, serif;
     font-size: 1.2rem;
-    color: var(--text-on-dark);
     color: var(--brand-light);
     font-weight: bold;
     margin: 5px 0 5px 15px;
@@ -130,7 +127,6 @@ header span {
 .theme::before{
     content: "◐";
     font-size: 1.5rem;
-    color: var(--text-primary);
     color: var(--brand-accent);    
 }
 
@@ -146,7 +142,6 @@ header span {
 .hamburger::before {
     content: "\2630";
     font-size: 2rem;
-    color: var(--text-primary);
     color: var(--brand-accent);
 }
 
@@ -218,7 +213,7 @@ main h1 {
 .menu-button {
     font-family: "Material Symbols Outlined";
     background: none;
-    border: none;
+    /* border: none; */
     cursor: pointer;
 
     display: flex;
@@ -343,7 +338,6 @@ footer {
     flex-direction: column;
     justify-content: space-evenly;
     gap: 10px;
-    color: var(--text-primary);
     background-color: var(--bg-header-footer);
     border-top: 2px solid var(--border-main);
     color: var(--c-white);
