@@ -38,21 +38,22 @@
     /**************** MAIN ****************/
     main {
         padding: 10px;
+        min-height: 30vh;
     }
 
     .list {
         display: flex;
         flex-direction: column;
+    }
 
-        section {
+    .list section {
             display: grid;
             grid-template-columns: 30% 30% 15% 25%;
 
             /* white-space: nowrap; */
             overflow: hidden;  /* hide the big text */
             /* text-overflow: ellipsis; */
-        }
-    }
+        } 
 
     /**************** FOOTER ****************/
     footer {
@@ -62,4 +63,4 @@
 
 
     
-};
+}

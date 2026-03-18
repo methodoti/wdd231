@@ -13,7 +13,7 @@ getMembersData();
 
 const displayMembers = (members) => {
     members.forEach((members) => {
-        console.log(members.companywebsiteurl); 
+        // console.log(members.companywebsiteurl); 
         // card build code goes here
         let card = document.createElement("section");
         let logo = document.createElement("img");
