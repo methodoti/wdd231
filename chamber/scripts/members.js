@@ -30,8 +30,6 @@ const displayMembers = (members) => {
         logo.setAttribute("src", members.imagefilename);
         logo.setAttribute("alt", `${members.companyname}'s Logo`);
         logo.setAttribute("loading", "lazy");
-        // logo.setAttribute("width", "auto");
-        // logo.setAttribute("height", "20px");
 
         address.textContent = members.companyaddresses;
 

@@ -80,8 +80,6 @@ h1, h2, h3 {
     color: var(--c-almond-cream);
 }
 
-
-
 p {
     font-family: Roboto, Helvetica, sans-serif;
 }
@@ -96,10 +94,7 @@ header, main, nav, footer {
 header {
     display: grid;
     grid-template-columns: 60px auto 44px 44px;
-    /* padding: 5px 0 5px 10px; */
     align-items: center;
-    /* gap: 8px; */
-    /* height: 70px; */
     background-color: var(--bg-header-footer);
     border-bottom: 2px solid var(--border-main);
 }
@@ -125,8 +120,6 @@ header span {
     background: none;
     border: none;
     cursor: pointer;
-    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-    /* for align the hamburguer e theme */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,7 +146,6 @@ header span {
 .hamburger::before {
     content: "\2630";
     font-size: 2rem;
-    /* padding-bottom: 30px; */
     color: var(--text-primary);
     color: var(--brand-accent);
 }
@@ -171,7 +163,6 @@ header span {
     grid-column-start: 1;
     grid-column-end: 5;
     width: 100%;
-    /* background-color: var(--nav-hover); */
 }
 
 .navigation.show {
@@ -199,7 +190,6 @@ header span {
 
 li.current a {
     color: var(--nav-active);
-    /* color: var(--c-white); */
     font-weight: bold;
 }
 
@@ -209,7 +199,6 @@ li.current a::before {
 
 /**************** MAIN ****************/
 main {
-    min-height: 15vh;
     padding: 10px 0;
 }
 
@@ -229,8 +218,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* line-height: 1; */
-    /* height: 44px; */
     font-size: 2rem;
     height: 70px;
     width: 70px;
@@ -249,8 +236,6 @@ main {
 
 #grid::before {
     content: "\F3F9";
-    
-    /* width: auto; */
 }
 
 #list::before {
@@ -259,14 +244,7 @@ main {
 
 .members {
     padding-top: 20px;
-    /* border: 1px dashed red; */
 }
-
-/* .members section { */
-    /* border: 1px solid var(--border-soft); */
-    /* box-shadow: 0 0 1rem #555; */
-    /* padding: 5px; */
-/* } */
 
 .members section a {
     color: var(--text-link);
@@ -276,23 +254,20 @@ main {
 
 .grid {
 	display: grid;
-	/* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	grid-gap: 10px;
-	/* align-items: center; */
 
 	section {
 		text-align: center;
         box-shadow: 0 0 1rem #555;
         padding: 5px;
         background-color: var(--bg-container);
-        /* min-width: 300px; */
+
 		& > * {
 			margin: 0.1rem;
 		}
 
         h3 {
-            /* color: var(--brand-secondary); */
             color: var(--brand-primary);
             font-size: 1.1rem;
             padding: 5px 0;
@@ -305,25 +280,11 @@ main {
 
 	}
 
-	/* img { */
-		/* border: 1px solid #fff; */
-		/* box-shadow: 0 0 1rem #555; */
-        /* object-fit: cover; */
-	/* } */
+    img {
+        width: auto;
+        height: 65px;
+    }
 }
-
-/* h3 {
-	font-size: 1.2rem;
-} */
-/* h3 {
-    color: var(--brand-secondary);
-    font-size: 1.2rem;
-} */
-
-/* section p { */
-    /* color: var(--brand-accent); */
-    /* font-size: 0.9rem; */
-/* } */
 
 .list {
 	display: flex;
@@ -345,8 +306,6 @@ main {
 		}
 
 		h3 {
-            /* color: var(--brand-secondary); */
-            /* color: var(--c-black); */
             color: var(--brand-primary);
 			font-size: 1rem;
 		}
@@ -356,17 +315,15 @@ main {
         }
 
 		&:nth-child(even) {
-			/* background-color: #bbb; */
             background-color: var(--brand-light);
 		}
 	}
 }
 
-img {
+/* img {
 	width: auto;
 	height: 65px;
-    /* object-fit: cover; */
-}
+} */
 
 
 /**************** FOOTER ****************/
@@ -383,16 +340,13 @@ footer {
 }
 
 .chamber-info {
-    /* border: 2px dashed red; */
     flex: 1;
 }
 
 .social {
     display: flex;
     justify-content: space-evenly;
-    /* column-gap: 1.5rem; */
     padding: 1rem 10px;
-    /* border: 2px dashed red; */
     flex: 1;
     
 }
@@ -401,7 +355,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid red; */
     background-color: var(--c-jet-black);
     border-radius: 50%;
     width: 60px; 
@@ -414,6 +367,5 @@ footer {
 }
 
 .copyright {
-    /* border: 2px dashed red; */
     flex: 1;
 }
