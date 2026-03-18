@@ -348,6 +348,10 @@ footer {
     flex: 1;
 }
 
+.chamber-info h2 {
+    font-size: 1.1rem;
+}
+
 .social {
     display: flex;
     justify-content: space-evenly;
