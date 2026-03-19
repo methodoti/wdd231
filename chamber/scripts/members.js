@@ -19,9 +19,17 @@ const displayMembers = (members) => {
         let logo = document.createElement("img");
         let address = document.createElement("p");
         let phone = document.createElement("p");
+        let membership = document.createElement("p");
         let url = document.createElement("a")
         let companyName = document.createElement("h2");
 
+        // 1=member 🪪
+        // 2=silver 🥈 
+        // 3=gold 🏆
+        const memberLevel = ["🪪", "🥈", "🏆"];
+        // Nível 3 (Gold): Cor #FFD700 (Dourado clássico)
+        // Nível 2 (Silver): Cor #C0C0C0 (Prateado)
+        // Nível 1 (Member/Bronze): Cor #CD7F32 (Bronze)
 
         // build the h3 content out to show the member's company name
         companyName.textContent = members.companyname;
@@ -30,6 +38,28 @@ const displayMembers = (members) => {
         logo.setAttribute("src", members.imagefilename);
         logo.setAttribute("alt", `${members.companyname}'s Logo`);
         logo.setAttribute("loading", "lazy");
+
+        switch (members.membershiplevel) {
+            case 1:
+                console.log("Member");
+                membership.innerHTML = `${memberLevel[0]} Member`;
+                membership.classList.add("member");
+                break;
+            case 2:
+                console.log("Silver");
+                membership.innerHTML = `${memberLevel[1]} Silver`;
+                membership.classList.add("silver");
+                break;
+            case 3:
+                console.log("Gold");
+                membership.innerHTML = `${memberLevel[2]} Gold`;
+                membership.classList.add("gold");
+                break;
+            default:
+                break;
+        }
+
+        // membership.innerHTML = memberLevel[members.membershiplevel - 1];
 
         address.textContent = members.companyaddresses;
 
@@ -43,6 +73,7 @@ const displayMembers = (members) => {
 
         // append the section with the created elements
         card.appendChild(logo);
+        card.appendChild(membership);
         card.appendChild(companyName);
         card.appendChild(address);
         card.appendChild(phone);

@@ -75,7 +75,8 @@ body {
 
 h1, h2 {
     font-family: Gelasio, 'Times New Roman', Times, serif;
-    color: var(--c-almond-cream);
+    /* color: var(--c-almond-cream);
+    color: white; */
 }
 
 p {
@@ -259,9 +260,32 @@ main h1 {
 }
 
 .members section p {
-    /* color: var(--brand-secondary);  */
     color: var(--brand-dark); 
 }
+
+.member {
+    display: block;
+    padding-top: 3px;
+    /* color: #CD7F32; */
+    /* text-shadow: 0 0 10px #CD7F32; */
+}
+
+.silver {
+    display: block;
+    padding-top: 3px;
+    /* color: #999999; */
+    text-shadow: 0 0 10px #585858;
+}
+
+.gold {
+    display: block;
+    padding-top: 3px;
+    /* color: #FFD700; */
+    /* text-shadow: 0 0 1rem var(--brand-secondary); */
+    text-shadow: 0 0 10px #FFD700;
+}
+
+
 
 /*----------- GRID -----------*/
 .grid {
@@ -279,7 +303,7 @@ main h1 {
 }
 
 .grid h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 5px 0;
     margin: 0.2rem;
 }
@@ -329,6 +353,27 @@ main h1 {
 .list section a {
     margin: 0 1rem;
 
+}
+
+.list .member {
+    display: block;
+    padding: 0;
+    /* color: #CD7F32; */
+    text-shadow: 0 0 0;
+}
+
+.list .silver {
+    display: block;
+    padding: 0;
+    /* color: #999999; */
+    text-shadow: 0 0 0;
+}
+
+.list .gold {
+    display: block;
+    padding: 0;
+    /* color: #FFD700; */
+    text-shadow: 0 0 0;
 }
 
 
