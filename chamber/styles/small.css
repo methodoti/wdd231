@@ -196,7 +196,8 @@ li.current a::before {
 
 /**************** MAIN ****************/
 main {
-    padding: 10px 0;
+    /* padding: 10px 0; */
+    padding: 0;
 }
 
 main h1 {
@@ -246,7 +247,7 @@ main h1 {
 }
 
 .members {
-    padding-top: 20px;
+    padding: 20px 0;
 }
 
 .members section a {
@@ -297,9 +298,9 @@ main h1 {
 
 .grid section {
     text-align: center;
-        box-shadow: 0 0 1rem #555;
-        padding: 5px;
-        background-color: var(--bg-container);
+    box-shadow: 0 0 1rem #555;
+    padding: 5px;
+    background-color: var(--bg-container);
 }
 
 .grid h2 {
@@ -422,4 +423,29 @@ footer {
 
 .copyright {
     flex: 1;
+}
+
+/*  =========================================
+    INDEX.HTML
+    -----------------------------------------
+    Landing Page
+    ========================================= */
+
+/**************** MAIN ****************/
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.events-div {
+    padding: 10px;
+}
+
+.spotlight {
+    padding: 10px;
+}
+
+.main-div {
+    padding: 0 0 10px 0;
 }

@@ -45,21 +45,31 @@
             
         </header>
         <main>
-            <div class="heroimg">
-                <img src="images/ogimage.png" alt="">
+            <div class="hero">
+                <picture>
+                    <!-- <source srcset="images/hero-large.webp" media="(min-width: 840px)">
+                    <source srcset="images/hero-medium.webp" media="(min-width: 640px)">
+                    <img src="images/hero-small.webp" alt="Porto Alegre Skyline" width="480" height="240"> -->
+                    <source srcset="images/hero-large.webp" media="(min-width: 768px)">
+                    <source srcset="images/hero-medium.webp" media="(min-width: 480px)">
+                    <img src="images/hero-small.webp" alt="Porto Alegre Skyline" width="480" height="240">
+                </picture>
                 <span>Call to Action</span>
             </div>
-            <h1>Home</h1>
-            <div>
-                <div class="events">Events</div>
-                <div class="weather">Current Weather</div>
-                <div class="forecast">Weather Forecast</div>
+            <div class="main-div">
+                <h1>Home</h1>
+                <div class="events-div">
+                    <div class="events">Events</div>
+                    <div class="weather">Current Weather</div>
+                    <div class="forecast">Weather Forecast</div>
+                </div>
+                <div class="spotlight">
+                    <div>Business 1</div>
+                    <div>Business 2</div>
+                    <div>Business 3</div>
+                </div>
             </div>
-            <div id="spotlight">
-                <div>Business 1</div>
-                <div>Business 2</div>
-                <div>Business 3</div>
-            </div>
+
             
         </main>
 
