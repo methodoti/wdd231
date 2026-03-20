@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+}
+
+.card {
+    border: 1px solid #5d6f67;
+    background-color: #bbaba1;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+.card #town {
+    color: #3a5250;
+    margin: .3rem 0;
+}
+
+.card figcaption {
+    text-transform: capitalize;
+    color: #3a5250;
+    margin: .3rem 0;
+}
+
+.card #current-temp {
+    font-size: 2rem;
+    color: #537279;
+    margin: .3rem 0;
+}
+
+footer {
+    text-align: center;
+    margin: 1rem;
+}
