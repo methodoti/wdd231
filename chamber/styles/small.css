@@ -428,21 +428,21 @@ footer {
 /*  =========================================
     INDEX.HTML
     -----------------------------------------
-    Landing Page
+    Home Page
     ========================================= */
 
 /**************** MAIN ****************/
 
-.hero {
+.home-page .hero {
     position: relative;
 }
 
-.hero img {
+.home-page .hero img {
     width: 100%;
     height: auto;
 }
 
-.cta {
+.home-page .cta {
     position: absolute;
     right: 5%;
     bottom: 12%;
@@ -464,21 +464,54 @@ footer {
     background-color: var(--action-color);
 }
 
-.cta:hover {
+.home-page .cta:hover {
     /* box-shadow: 5px 5px 1rem #FFD700; */
     /* background-color: #FFD700; */
     text-shadow: 0 0 8px #FFD700;
     /* color: #FFD700; */
 }
 
-.events-div {
+.home-page .events-div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
     padding: 10px;
+    
 }
 
-.spotlight {
-    padding: 10px;
+.home-page .events-div section {
+    background-color: var(--bg-container);
 }
 
-.main-div {
+.home-page .events-div h2 {
+    background-color: var(--brand-primary);
+    color: var(--text-on-dark);
+    /* font-size: 1.5rem; */
+
+    /* background-color: var(--bg-nav); */
+    padding: 8px;
+    text-align: left;
+    /* color: var(--text-nav); */
+    font-size: 1rem;
+    margin: 0;
+}
+
+.home-page .spotlight {
+    padding: 10px 10px 20px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.home-page .spotlight section {
+    background-color: var(--bg-container);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+
+
+
+/* .div-events-weather-forecast {
     padding: 0 0 10px 0;
-}
+} */
