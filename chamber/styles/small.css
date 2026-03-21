@@ -57,10 +57,10 @@
     /* 4. UI & DECORATION */
     --border-main: var(--brand-dark);           /* Buttons/Divs border */
     --border-soft: var(--brand-secondary);      /* Light division/Lines */
-    --shadow-main: rgba(0, 0, 0, 0.2);        /* Default Shadow */
+    --shadow-main: rgba(0, 0, 0, .8);        /* Default Shadow */
 
     /* 5. STATE & DYNAMIC (JavaScript/Action) */
-    --action-color: var(--brand-accent);        /* Call-to-action buttons */
+    --action-color: var(--brand-primary);        /* Call-to-action buttons */
     --status-success: var(--brand-primary);     /* Completed/Right items */
 }
 
@@ -433,9 +433,42 @@ footer {
 
 /**************** MAIN ****************/
 
+.hero {
+    position: relative;
+}
+
 .hero img {
     width: 100%;
     height: auto;
+}
+
+.cta {
+    position: absolute;
+    right: 5%;
+    bottom: 12%;
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    height: 44px;
+    /* width: 170px;     */
+    width: 16%;
+    min-width: 120px;    
+    text-align: center;
+    align-content: center;
+    /* border: 1px solid var(--border-soft); */
+    border-radius: 8px;
+    box-shadow: 5px 5px 8px var(--shadow-main);
+    /* color: var(--text-link); */
+    color: #FFD700;
+    background-color: var(--action-color);
+}
+
+.cta:hover {
+    /* box-shadow: 5px 5px 1rem #FFD700; */
+    /* background-color: #FFD700; */
+    text-shadow: 0 0 8px #FFD700;
+    /* color: #FFD700; */
 }
 
 .events-div {
