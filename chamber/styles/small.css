@@ -499,7 +499,7 @@ footer {
 .home-page .spotlight {
     padding: 10px 10px 20px 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 10px;
 }
 
