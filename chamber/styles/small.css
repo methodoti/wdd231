@@ -486,14 +486,41 @@ footer {
 .home-page .events-div h2 {
     background-color: var(--brand-primary);
     color: var(--text-on-dark);
-    /* font-size: 1.5rem; */
-
-    /* background-color: var(--bg-nav); */
     padding: 8px;
     text-align: left;
-    /* color: var(--text-nav); */
     font-size: 1rem;
     margin: 0;
+}
+
+.home-page .weather-div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 5px;
+}
+
+.home-page .weather-div .temp-div p {
+    margin: 0.4rem 0;
+    /* margin: 0; */
+    /* color: blue; */
+}
+
+.home-page .weather-div .temp-div .p-temp-current {
+    margin: 1.2rem 0 .6rem 0;
+}
+
+.home-page .weather-div .temp-div #temp-current {
+    font-weight: bold;
+    /* padding: 1rem 0; */
+    /* margin: 0; */
+    /* color: red; */
+}
+
+
+
+
+
+.home-page #temp-description {
+    text-transform: capitalize;
 }
 
 .home-page .spotlight {
