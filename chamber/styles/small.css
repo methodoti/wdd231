@@ -471,7 +471,7 @@ footer {
     /* color: #FFD700; */
 }
 
-.home-page .events-div {
+.home-page .events-weather-forecast {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
@@ -479,11 +479,11 @@ footer {
     
 }
 
-.home-page .events-div section {
+.home-page .events-weather-forecast section {
     background-color: var(--bg-container);
 }
 
-.home-page .events-div h2 {
+.home-page .events-weather-forecast h2 {
     background-color: var(--brand-primary);
     color: var(--text-on-dark);
     padding: 8px;
