@@ -611,22 +611,23 @@ footer {
 }
 
 .home-page .spotlight .div-data {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    /* gap: 5px; */
+    /* display: grid;
+    grid-template-columns: 1fr 2fr; */
+    display: flex;
+    gap: 5px;
     /* display: flex; */
 
 
     /* grid-template-columns: 102px 2fr; */
     padding: 8px;
     /* min-width: 250px; */
+    align-items: center;
 }
 
 .home-page .spotlight .div-logo img {
     /* min-width: 90px; */
     width: 110px;
     height: auto;
-
 }
 
 .home-page .spotlight .div-info {
