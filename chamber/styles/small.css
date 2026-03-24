@@ -599,7 +599,7 @@ footer {
     font-size: 1.2rem;
     /* padding: 5px 0; */
     /* margin: 0.2rem; */
-    margin: 0;
+    margin: 0 8px;
     color: var(--brand-primary);
 }
 
@@ -611,10 +611,11 @@ footer {
 }
 
 .home-page .spotlight .div-data {
-    /* display: grid;
-    grid-template-columns: 1fr 2fr; */
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     gap: 5px;
+    /* display: flex;
+    gap: 5px; */
     /* display: flex; */
 
 
@@ -625,8 +626,9 @@ footer {
 }
 
 .home-page .spotlight .div-logo img {
-    /* min-width: 90px; */
-    width: 110px;
+    /* min-width: 85px; */
+    /* width: 110px; */
+    max-width: 100%;
     height: auto;
 }
 
