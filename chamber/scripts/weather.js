@@ -38,7 +38,7 @@ const apiFetch = async () => {
       if (response.ok) {
           const data = await response.json(); // Wait for the response to be converted to JSON
           // console.table(data); // Output the fetched data in table
-          console.log(data);  // output the fetched data object
+          // console.log(data);  // output the fetched data object
           displayResults(data);
       } else {
           throw Error(await response.text());
@@ -54,7 +54,7 @@ const apiForecastFetch = async () => {
       if (response.ok) {
           const data = await response.json(); // Wait for the response to be converted to JSON
           // console.table(data); // Output the fetched data in table
-          console.log(data);  // output the fetched data object
+          // console.log(data);  // output the fetched data object
           displayResultsForecast(data);
       } else {
           throw Error(await response.text());
@@ -104,7 +104,7 @@ const displayResultsForecast = (data) => {
         return element.dt_txt.includes("12:00:00");
     }
 
-    console.log(filteredData);
+    // console.log(filteredData);
 
     const currentDay = new Date().getDay();
     // console.log(`Current Day: ${weekday[new Date().getDay()]}`);
@@ -118,11 +118,11 @@ const displayResultsForecast = (data) => {
         if (dia === currentDay) {
             forecastDay[i].innerHTML = `Today:`;
             forecastTemp[i].innerHTML = `${Math.round(filteredData[i].main.temp)}&deg${unitsLetter}`;
-            console.log(`TEMPERATURA DE HOJE: ${filteredData[i].main.temp}&deg`); 
+            // console.log(`TEMPERATURA DE HOJE: ${filteredData[i].main.temp}&deg`); 
         } else {
             forecastDay[i].innerHTML = `${weekday[dia]}:`;
             forecastTemp[i].innerHTML = `${Math.round(filteredData[i].main.temp)}&deg${unitsLetter}`;
-            console.log(`temperatura de ${weekday[dia]}: ${filteredData[i].main.temp}`);
+            // console.log(`temperatura de ${weekday[dia]}: ${filteredData[i].main.temp}`);
         }
     }
     // console.log("-----------------");
