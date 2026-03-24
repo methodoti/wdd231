@@ -492,6 +492,8 @@ footer {
     margin: 0;
 }
 
+
+/* ===== EVENTS SECTION ===== */
 .home-page .events-div {
     /* display: grid; */
     /* flex-direction: column; */
@@ -502,6 +504,8 @@ footer {
     /* min-width: 195px; */
 }
 
+
+/* ===== WEATHER SECTION ===== */
 .home-page .weather-div {
     display: grid;
     /* grid-template-columns: 1fr 2fr; */
@@ -530,10 +534,8 @@ footer {
     font-weight: bold;
 }
 
-/* .home-page .forecast {
-    min-width: 200px;
-} */
 
+/* ===== FORECAST SECTION ===== */
 .home-page .forecast-div {
     display: grid;
     /* flex-direction: column; */
