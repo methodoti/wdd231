@@ -41,17 +41,17 @@ const displayMembers = (members) => {
 
         switch (members.membershiplevel) {
             case 1:
-                console.log("Member");
+                // console.log("Member");
                 membership.innerHTML = `${memberLevel[0]} Member`;
                 membership.classList.add("member");
                 break;
             case 2:
-                console.log("Silver");
+                // console.log("Silver");
                 membership.innerHTML = `${memberLevel[1]} Silver`;
                 membership.classList.add("silver");
                 break;
             case 3:
-                console.log("Gold");
+                // console.log("Gold");
                 membership.innerHTML = `${memberLevel[2]} Gold`;
                 membership.classList.add("gold");
                 break;

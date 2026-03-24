@@ -7,7 +7,7 @@ async function getMembersData() {
     const response = await fetch(file);
     const data = await response.json();
     // console.table(data.members);
-    console.log(data.members);
+    // console.log(data.members);
     displayMembers(data.members);
 }
 
@@ -16,7 +16,7 @@ getMembersData();
 const displayMembers = (members) => {
 
     const filteredMembers = members.filter(filterMembers);
-    console.log(filteredMembers);
+    // console.log(filteredMembers);
 
     function filterMembers(element) {
         return element.membershiplevel > 1;
@@ -29,7 +29,7 @@ const displayMembers = (members) => {
         // console.log(`random: ${randomNumber}`);
 
         // ===> create the html elements here!
-        console.log(filteredMembers[randomNumber].companyname);
+        // console.log(filteredMembers[randomNumber].companyname);
         // display their *company name, *logo, *phone, *address, *website, and membership level
 
         let card = document.createElement("section");
@@ -66,17 +66,17 @@ const displayMembers = (members) => {
 
         switch (filteredMembers[randomNumber].membershiplevel) {
             case 1:
-                console.log("Member");
+                // console.log("Member");
                 membership.innerHTML = `${memberLevel[0]} Member`;
                 membership.classList.add("member");
                 break;
             case 2:
-                console.log("Silver");
+                // console.log("Silver");
                 membership.innerHTML = `${memberLevel[1]} Silver`;
                 membership.classList.add("silver");
                 break;
             case 3:
-                console.log("Gold");
+                // console.log("Gold");
                 membership.innerHTML = `${memberLevel[2]} Gold`;
                 membership.classList.add("gold");
                 break;
@@ -93,7 +93,7 @@ const displayMembers = (members) => {
 
         // ===> delete the member used to not repeat it again
         filteredMembers.splice(randomNumber, 1);
-        console.log(filteredMembers);
+        // console.log(filteredMembers);
 
         // ===> add the elements to the card
         divName.appendChild(companyName);
