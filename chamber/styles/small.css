@@ -435,6 +435,7 @@ footer {
 
 .home-page .hero {
     position: relative;
+
 }
 
 .home-page .hero img {
@@ -443,7 +444,6 @@ footer {
 }
 
 .home-page .cta {
-    color: white;
     position: absolute;
     right: 5%;
     bottom: 12%;
