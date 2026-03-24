@@ -506,9 +506,9 @@ footer {
 }
 
 
-/* .home-page .weather-div .temp-div .p-temp-current {
-    margin: 1.2rem 0 .6rem 0;
-} */
+.home-page .weather-div .temp-div .p-temp-current {
+    margin: 1rem 0 .6rem 0;
+}
 
 .home-page .weather-div .temp-div #temp-current {
     font-weight: bold;
@@ -525,16 +525,16 @@ footer {
     grid-template-columns: 1fr;
     /* padding: 5px 5px 5px 8px; */
     padding: 8px;
-    min-width: 170px;
+    min-width: 195px;
 }
 
 .home-page .forecast-div  p {
-    margin: 0.4rem 0;
-    /* margin: 0; */
+    margin: 0.4rem 0 1rem 0;
+    font-size: 1.2rem;
+    
     /* color: blue; */
 }
 
-/* CONFERIR ESPACAMENTO! TEM COISA ERRADA, AJUSTAR NÃO POR MARGIN NO INÍCIO PODE SER A SOLUÇÃO */
 /* .home-page .forecast-div .p-temp-current {
     margin: 1.2rem 0 .6rem 0;
 } */
