@@ -7,10 +7,15 @@ const tempLow = document.querySelector("#temp-low");
 const tempHumidity = document.querySelector("#temp-humidity");
 const tempSunrise = document.querySelector("#temp-sunrise");
 const tempSunset = document.querySelector("#temp-sunset");
-const weatherIcon = document.querySelector("#weather-icon");
+// const weatherIcon = document.querySelector("#weather-icon");
+const weatherDiv = document.querySelector(".weather-div");
+const icon = document.querySelector(".icon");
+// const weatherIcon = document.createElement("img");
 
 const forecastDay = document.querySelectorAll(".forecast-day");
 const forecastTemp = document.querySelectorAll(".forecast-temp");
+
+
 
 // const url = "https://api.openweathermap.org/data/2.5/weather?lat=49.75&lon=6.64&units=metric&appid=0895cd8b20aa3d0c559edabf7346fbf3";
 
@@ -76,8 +81,18 @@ const displayResults = (data) => {
     // example icon: https://openweathermap.org/img/w/10d.png
     // weatherIcon.setAttribute("src", `https://openweathermap.org/img/w/${data.weather[0].icon}.png`);
     // example icon resizeble: https://openweathermap.org/img/wn/10d@2x.png
+    // const weatherIcon = document.createElement("img");
+
+
+    const weatherIcon = document.createElement("img");
     weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
     weatherIcon.setAttribute("alt", data.weather[0].description);
+    weatherIcon.id = "weather-icon";
+    icon.appendChild(weatherIcon);
+    // weatherDiv.appendChild(icon);
+    // weatherDiv.appendChild(weatherIcon);
+
+
     // tempCurrent.innerHTML = `${data.main.temp}&deg;${unitsLetter}`;
     tempCurrent.innerHTML = `${Math.round(data.main.temp)}&deg;`;
     letter.textContent = unitsLetter;
