@@ -443,6 +443,11 @@ footer {
 }
 
 .home-page .cta {
+    color: white;
+}
+
+
+.home-page .cta {
     position: absolute;
     right: 5%;
     bottom: 12%;
