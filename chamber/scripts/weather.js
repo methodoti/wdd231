@@ -86,9 +86,9 @@ const displayResults = (data) => {
     tempLow.innerHTML = `${Math.round(data.main.temp_min)}&deg;${unitsLetter}`;
     tempHumidity.textContent = `${data.main.humidity}%`;
     const sunrise = new Date(data.sys.sunrise * 1000); 
-    tempSunrise.textContent = sunrise.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    tempSunrise.textContent = sunrise.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", hour12: true }).toLowerCase();
     const sunset = new Date(data.sys.sunset * 1000); 
-    tempSunset.textContent = sunset.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    tempSunset.textContent = sunset.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", hour12: true }).toLowerCase();
     // console.log(data.weather[0].icon);
 }
 
