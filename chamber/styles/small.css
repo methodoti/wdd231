@@ -495,7 +495,8 @@ footer {
 .home-page .weather-div {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    padding: 5px;
+    padding: 8px;
+    min-width: 250px;
 }
 
 .home-page .weather-div .temp-div p {
@@ -503,6 +504,10 @@ footer {
     /* margin: 0; */
     /* color: blue; */
 }
+
+/* .home-page .weather-div .temp-div .p-temp-current {
+    margin: 1.2rem 0 .6rem 0;
+} */
 
 .home-page .weather-div .temp-div .p-temp-current {
     margin: 1.2rem 0 .6rem 0;
@@ -515,9 +520,25 @@ footer {
     /* color: red; */
 }
 
+.home-page .forecast {
+    /* min-width: 200px; */
+}
 
+.home-page .forecast-div {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* padding: 5px 5px 5px 8px; */
+    padding: 8px;
+    min-width: 170px;
+}
 
+.home-page .forecast-div .p-temp-current {
+    margin: 1.2rem 0 .6rem 0;
+}
 
+.home-page .forecast-div .forecast-temp {
+    font-weight: bold;
+}
 
 .home-page #temp-description {
     text-transform: capitalize;
