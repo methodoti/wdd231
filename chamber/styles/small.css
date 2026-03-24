@@ -494,9 +494,15 @@ footer {
 
 .home-page .weather-div {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    /* grid-template-columns: 1fr 2fr; */
+    grid-template-columns: 102px 2fr;
     padding: 8px;
     min-width: 250px;
+}
+
+.home-page .weather-div img {
+    /* border: 1px solid black; */
+    /* justify-self: center; */
 }
 
 .home-page .weather-div .temp-div p {

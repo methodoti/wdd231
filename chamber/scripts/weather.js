@@ -79,11 +79,11 @@ const displayResults = (data) => {
     weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
     weatherIcon.setAttribute("alt", data.weather[0].description);
     // tempCurrent.innerHTML = `${data.main.temp}&deg;${unitsLetter}`;
-    tempCurrent.innerHTML = `${data.main.temp}&deg;`;
+    tempCurrent.innerHTML = `${Math.round(data.main.temp)}&deg;`;
     letter.textContent = unitsLetter;
     tempDescription.textContent = data.weather[0].description;
-    tempHigh.innerHTML = `${data.main.temp_max}&deg;${unitsLetter}`;
-    tempLow.innerHTML = `${data.main.temp_min}&deg;${unitsLetter}`;
+    tempHigh.innerHTML = `${Math.round(data.main.temp_max)}&deg;${unitsLetter}`;
+    tempLow.innerHTML = `${Math.round(data.main.temp_min)}&deg;${unitsLetter}`;
     tempHumidity.textContent = `${data.main.humidity}%`;
     const sunrise = new Date(data.sys.sunrise * 1000); 
     tempSunrise.textContent = sunrise.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
@@ -117,11 +117,11 @@ const displayResultsForecast = (data) => {
         
         if (dia === currentDay) {
             forecastDay[i].innerHTML = `Today:`;
-            forecastTemp[i].innerHTML = `${filteredData[i].main.temp}&deg${unitsLetter}`;
+            forecastTemp[i].innerHTML = `${Math.round(filteredData[i].main.temp)}&deg${unitsLetter}`;
             console.log(`TEMPERATURA DE HOJE: ${filteredData[i].main.temp}&deg`); 
         } else {
             forecastDay[i].innerHTML = `${weekday[dia]}:`;
-            forecastTemp[i].innerHTML = `${filteredData[i].main.temp}&deg${unitsLetter}`;
+            forecastTemp[i].innerHTML = `${Math.round(filteredData[i].main.temp)}&deg${unitsLetter}`;
             console.log(`temperatura de ${weekday[dia]}: ${filteredData[i].main.temp}`);
         }
     }
