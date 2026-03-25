@@ -133,7 +133,8 @@ function cardCourse() {
     for (let index = 0; index < filteredCourses.length; index++) {
         const element = filteredCourses[index].subject;
 
-        const subjects = document.createElement("span");
+        // const subjects = document.createElement("span");
+        const subjects = document.createElement("button");
         subjects.classList.add("subjectCards");
         if (filteredCourses[index].completed) {
                 subjects.classList.add("subjectCompleted");
