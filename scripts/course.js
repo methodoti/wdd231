@@ -135,6 +135,7 @@ function cardCourse() {
 
         // const subjects = document.createElement("span");
         const subjects = document.createElement("button");
+        // subjects.setAttribute("type", "button");
         subjects.classList.add("subjectCards");
         if (filteredCourses[index].completed) {
                 subjects.classList.add("subjectCompleted");
