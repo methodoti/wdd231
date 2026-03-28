@@ -11,23 +11,25 @@ const myTitle = document.querySelector("#mydialog h2");
 const myInfo = document.querySelector("#mydialog p");
 const myClose = document.querySelector("#mydialog button");
 
+// CLOSE EVENT LISTNER: it will be the only one for all modals
 myClose.addEventListener("click", () => {
     myDialog.close();
 })
 
 //------------- LOOP THROUGH THE ARRAY OF JSON ITEMS
 // DISPLAY ALL THE TEMPLE PICTURES
-function displayTemple(templesArray) { // 'data' is the incoming variable
-    console.log(templesArray);
-    templesArray.forEach(element => {
-        console.log(element);
-        const photo = document.createElement("img");
+function displayTemple(templesArray) { // 'templesArray' is the incoming variable from the temples array object
+    console.log(templesArray);         // just a test to see if it works well
+    templesArray.forEach(element => {  // the MAGIC! it will iterate though all the array with this build-in method
+        console.log(element);          // just a test to see if it works, for individual itens this time
+        const photo = document.createElement("img");  // create the photo
         photo.src = `${url}${element.path}`;
         photo.alt = element.name;
+
         // Add an event listener to each division on the page.
         photo.addEventListener("click", () => showStuff(element));
 
-        showHere.appendChild(photo);
+        showHere.appendChild(photo); // append the photo to the showHere div on the page. (with the event listener)
     });
 }
 
