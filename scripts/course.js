@@ -82,13 +82,10 @@ const button = document.querySelectorAll(".button-courses"); // All | WDD | CSE
 const numCredits = document.querySelector("#num-credits");   // the total credits for course listed
 // for the DIALOG
 const courseDetails = document.querySelector("#course-details");
-const courseDetailsTitle = document.querySelector("#course-details h1");
-const closeButton = document.querySelector("#closeModal");
+// const courseDetailsTitle = document.querySelector("#course-details h2");
+// const closeButton = document.querySelector("#closeModal");
 
-// CLOSE EVENT LISTNER: it will be the only one for all modals
-closeButton.addEventListener("click", () => {
-    courseDetails.close();
-});
+
 
 
 let courseToFilter = "All"  // DEFAULT BUTTON SELECTION: in this first stage, the filterCourses will return All.
@@ -141,11 +138,11 @@ function cardCourse() {
         return acumulator + course.credits;
     }, 0);
 
-    console.log(filteredCourses); // just to see the filteredCourses array is ok
+    // console.log(filteredCourses); // just to see the filteredCourses array is ok
 
     for (let index = 0; index < filteredCourses.length; index++) {      // iterate on the filteredCourses elements
 
-        console.log(filteredCourses[index]);  // just to see the filteredCourses current element
+        // console.log(filteredCourses[index]);  // just to see the filteredCourses current element
 
         //const element = filteredCourses[index].subject;  // takes the subject: CSE | WDD
 
@@ -160,7 +157,9 @@ function cardCourse() {
             subjectButton.textContent = `${filteredCourses[index].subject} ${filteredCourses[index].number}`;
         }
 
-        subjectButton.addEventListener("click", () => showStuff(filteredCourses[index]));
+        subjectButton.addEventListener("click", () => { // add event listener to the current button
+            displayCourseDetails(filteredCourses[index])
+        });
         
         arraySubject.append(subjectButton);  // add the subjectButton to the DIV on the COUSES BUTTONS AREA
     }
@@ -177,7 +176,23 @@ function filterCourse(course) {
 }
 
 // for the DIALOG
-function showStuff(element) {
-    courseDetailsTitle.innerHTML = `${element.subject} ${element.number}`;
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = "";
+    courseDetails.innerHTML = `
+        <div>
+        <button id="closeModal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        </div>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
     courseDetails.showModal();
+
+    // CLOSE EVENT LISTNER: it will be the only one for all modals
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
 }

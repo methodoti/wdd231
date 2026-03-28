@@ -60,7 +60,7 @@ h1 {
     color: var(--color-primary);
 }
 
-h2 {
+h2, h3 {
     font-family: "Montserrat Alternates", Arial, Helvetica, sans-serif;
 }
 
@@ -188,6 +188,7 @@ main section {
 
 main p {
     padding: 0 10px ;
+    color: var(--text-primary);
 }
 
 main .student-photo img {
@@ -270,7 +271,7 @@ main .subjectCompleted {
 
 /*/////////////// Modal ////////////////////////////////*/
 
-dialog {
+#course-details {
     border: 1px solid rgb(0 0 0 / 10%);
     border-radius: .25rem;
     padding: 1rem;
@@ -280,11 +281,19 @@ dialog {
     max-width: 600px;
 }
 
-dialog::backdrop {
+#course-details::backdrop {
     background-color: rgb(0 0 0 / 50%);
 }
 
-dialog button {
+#course-details div {
+    display: grid;
+    align-items: center;
+    height: 50px;
+    background-color: var(--bg-nav);
+    /* background-color: red; */
+}
+
+#course-details button {
     position: absolute;
     top: 23px;
     right: 23px;
@@ -292,9 +301,23 @@ dialog button {
     border: 1px solid rgb(0 0 0 / 10%);
 }
 
-dialog button::before {
-    content: "❌";
+#course-details h3 {
+    /* background-color: var(--bg-nav); */
+    /* padding: 8px; */
+    /* text-align: center; */
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    /* margin: 0; */
 }
+
+#course-details p {
+    padding: 0;
+    color: var(--text-primary);
+}
+
+/* dialog button::before {
+    content: "❌";
+} */
 
 
 /**************** FOOTER ****************/
