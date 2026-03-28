@@ -1,6 +1,6 @@
-import { temples } from "../data/temples.js";
+import { temples } from "../data/templesData.js";
 // console.log(temples);
-import { url } from "../data/temples.js";
+import { url } from "../data/templesData.js";
 // console.log(url);
 
 //-------------  GRAB A REFERENCE TO THE DIVISION WHERE WE DISPLAY THE ITEMS
