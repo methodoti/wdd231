@@ -18,8 +18,8 @@
         <link rel="stylesheet" href="styles/larger.css">
         <script src="scripts/navigation.js" defer></script>
         <script src="scripts/date.js" defer></script>
-        <script src="scripts/weather.js" defer></script>
-        <script src="scripts/spotlight.js" defer></script>
+        <!-- <script src="scripts/weather.js" defer></script> -->
+        <!-- <script src="scripts/spotlight.js" defer></script> -->
         <link rel="icon" href="favicon.ico">
 
         <meta property="og:title" content="Porto Alegre Chamber of Commerce - Business Directory.">
@@ -33,9 +33,9 @@
             <span>Porto Alegre Chamber of Commerce</span>
             <nav id="nav-bar" class="navigation">
                 <ul>
-                    <li class="current"><a href="./index.html">Home</a></li>
+                    <li ><a href="./index.html">Home</a></li>
                     <li ><a href="./directory.html">Directory</a></li>
-                    <li><a href="./join.html">Join</a></li>
+                    <li class="current"><a href="./join.html">Join</a></li>
                     <li><a href="#">Discover</a></li>
                 </ul>
             </nav>
@@ -43,57 +43,8 @@
             <button id="nav-button" class="hamburger" aria-label="navigation"></button>
             
         </header>
-        <main class="home-page">
-            <div class="hero">
-                <picture>
-                    <source srcset="images/hero-large.webp" media="(min-width: 768px)">
-                    <source srcset="images/hero-medium.webp" media="(min-width: 480px)">
-                    <img src="images/hero-small.webp" alt="Porto Alegre Skyline" width="480" height="240">
-                </picture>
-                <a href="#" class="cta">Join Us!</a>
-            </div>
-            <!-- <div class="div-events-weather-forecast"> -->
-                <h1>Home</h1>
-                <div class="events-weather-forecast">
-                    <!-- EVENTS SECTION -->
-                    <section class="events">
-                        <h2>Events</h2>
-                        <div class="events-div">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum asperiores corrupti necessitatibus at! Dolor ipsum expedita qui, eligendi iusto doloribus vitae magnam explicabo optio reprehenderit maiores porro omnis ipsam reiciendis?</p>
-                        </div>
-                    </section>
-                    <!-- WEAHTER SECTION -->
-                    <section class="weather">
-                        <h2>Current Weather</h2>
-                        <div class="weather-div">
-                            <!-- <img id="weather-icon"> -->
-                            <span class="icon"></span>
-                            <div class="temp-div">
-                                <p class="p-temp-current"><span id="temp-current"></span>  <span id="units-letter"></span></p>
-                                <p><span id="temp-description"></span></p>
-                                <p>High: <span id="temp-high"></span></p>
-                                <p>Low: <span id="temp-low"></span></p>
-                                <p>Humidity: <span id="temp-humidity"></span></p>
-                                <p>Sunrise: <span id="temp-sunrise"></span></p>
-                                <p>Sunset: <span id="temp-sunset"></span></p>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- FORECAST SECTION -->
-                    <section class="forecast">
-                        <h2>Weather Forecast</h2>
-                        <div class="forecast-div">
-                            <p class="p-temp-current"><span class="forecast-day"></span> <span class="forecast-temp"></span></p>
-                            <p><span class="forecast-day"></span> <span class="forecast-temp"></span></p>
-                            <p><span class="forecast-day"></span> <span class="forecast-temp"></span></p>
-                        </div>
-                    </section>
-                </div>
-                <!-- SPOTLIGHT SECTION -->
-                <div class="spotlight"></div>
-            <!-- </div> -->
-
-            
+        <main class="join-page">
+                <h1>Join</h1>
         </main>
 
         <footer> 
