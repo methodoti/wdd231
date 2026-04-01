@@ -113,11 +113,17 @@
         /* max-width: 450px; */
     }
 
-    .member-level-section {
-        /* min-width: 40%;
-        max-width: 450px; */
+    /*  =========================================
+    THANKYOU.HTML
+    -----------------------------------------
+    Chamber Membership Response Page
+    ========================================= */
+
+    .thankyou-page span {
+        font-size: 1.4rem;
     }
 
-
-    
+    .thankyou-page p {
+        font-size: 1.2rem;
+    }
 }
