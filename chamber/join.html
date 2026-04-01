@@ -18,8 +18,8 @@
         <link rel="stylesheet" href="styles/larger.css">
         <script src="scripts/navigation.js" defer></script>
         <script src="scripts/date.js" defer></script>
-        <!-- <script src="scripts/weather.js" defer></script> -->
-        <!-- <script src="scripts/spotlight.js" defer></script> -->
+        <script src="scripts/modal.js" defer></script>
+        
         <link rel="icon" href="favicon.ico">
 
         <meta property="og:title" content="Porto Alegre Chamber of Commerce - Business Directory.">
@@ -78,23 +78,27 @@
                     <h2>Membership Levels</h2>
                     <section class="np-card">
                         <h3>Non Profit Membership Level</h3>
-                        <button>Learn More</button>
+                        <button id="np-button">Learn More</button>
                     </section>
                     <section class="bronze-card">
                         <h3>Bronze Membership Level</h3>
-                        <button>Learn More</button>
+                        <button id="bronze-button">Learn More</button>
                     </section>
                     <section class="silver-card">
                         <h3>Silver Membership Level</h3>
-                        <button>Learn More</button>
+                        <button id="silver-button">Learn More</button>
                     </section>
                     <section class="gold-card">
                         <h3>Gold Membership Level</h3>
-                        <button>Learn More</button>
+                        <button id="gold-button">Learn More</button>
                     </section>
                 </section>
             </div>
 
+            <dialog id="membership-modal">
+                <div></div>
+                <button id="closeButton">Close</button>
+            </dialog>
 
 
         </main>
