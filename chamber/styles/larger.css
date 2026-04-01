@@ -96,7 +96,28 @@
         /* display: flex; */
         grid-template-columns: 1fr 1fr 1fr;
     }
-    
+
+    /*  =========================================
+    JOIN.HTML
+    -----------------------------------------
+    Chamber Membership Join Page
+    ========================================= */
+
+    /**************** MAIN ****************/
+
+    .join-page div {
+        flex-direction: row;    
+        gap: 10px;
+        align-items: normal;
+        /* min-width: 0; */
+        /* max-width: 450px; */
+    }
+
+    .member-level-section {
+        /* min-width: 40%;
+        max-width: 450px; */
+    }
+
 
     
 }
