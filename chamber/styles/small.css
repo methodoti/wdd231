@@ -904,15 +904,19 @@ input[type=submit]:hover {
 
 #np-button {
     color: var(--text-on-dark);
+    background-color: var(--brand-secondary);
 }
 #silver-button {
     color: var(--text-on-dark);
+    background-color: var(--brand-secondary);
 }
 #bronze-button {
     color: var(--text-on-dark);
+    background-color: var(--brand-secondary);
 }
 #gold-button {
     color: var(--text-on-dark);
+    background-color: var(--brand-secondary);
 }
 
 
@@ -925,7 +929,7 @@ input[type=submit]:hover {
     border-radius: 8px;
     /* box-shadow: 5px 5px 8px var(--shadow-main); */
     /* color: var(--text-on-dark); */
-    background-color: var(--brand-secondary);
+    /* background-color: var(--brand-secondary); */
 }
 .member-level-section button:hover {
     text-shadow: 0 0 8px #FFD700;
