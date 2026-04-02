@@ -905,6 +905,15 @@ input[type=submit]:hover {
 #np-button {
     color: var(--text-on-dark);
 }
+#silver-button {
+    color: var(--text-on-dark);
+}
+#bronze-button {
+    color: var(--text-on-dark);
+}
+#gold-button {
+    color: var(--text-on-dark);
+}
 
 
 .member-level-section button {
@@ -915,7 +924,7 @@ input[type=submit]:hover {
     border: none;
     border-radius: 8px;
     /* box-shadow: 5px 5px 8px var(--shadow-main); */
-    color: var(--text-on-dark);
+    /* color: var(--text-on-dark); */
     background-color: var(--brand-secondary);
 }
 .member-level-section button:hover {
