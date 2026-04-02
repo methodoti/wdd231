@@ -902,6 +902,10 @@ input[type=submit]:hover {
 }
 /* ********************************************** */
 
+#np-button {
+    color: var(--text-on-dark);
+}
+
 
 .member-level-section button {
     font-family: sans-serif;
