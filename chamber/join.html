@@ -53,8 +53,7 @@
                     <form action="thankyou.html" method="get" class="join-form">
                         <label>First Name <input type="text" name="first-name" required autocomplete="given-name" title="Your First Name"></label>
                         <label>Last Name <input type="text" name="last-name" required autocomplete="family-name" title="Your Last Name"></label>
-                        <label>Organization Title <input type="text" name="organization-title" autocomplete="organization-title" title="Your title on your Organization" pattern="[A-Za-z\s-]{7,}"></label>
-                        <!-- <label>Organization Title <input type="text" name="organization-title" autocomplete="organization-title" title="Your title on your Organization" pattern="[A-Za-z ]{7,}"></label> -->
+                         <label>Organization Title <input type="text" name="organization-title" autocomplete="organization-title" title="Minimum 7 characters. Only letters, spaces, and hyphens allowed." pattern="[A-Za-z \-]{7,}"></label>
                         <label>Email <input type="email" name="email" required placeholder="joseph@gmail.com"  title="Your Email" autocomplete="email"></label>
                         <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel" title="A Phone Number" placeholder="555-555-1234" ></label>
                         <label>Organization Name <input type="text" name="organization-name" required autocomplete="organization" title="Your Organization's Name"></label>
