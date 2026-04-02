@@ -854,22 +854,54 @@ input[type=submit]:hover {
 }
 
 .member-level-section .np-card {
-    background-color: var(--c-white);
+    /* background-color: var(--c-white); */
+    background-color: var(--bg-container);
     border: 1px solid var(--border-soft);
+
+    animation: np-background 1s ease-in-out 1.0s 1 normal forwards;
 }
 .member-level-section .bronze-card {
     /* background-color: rgba(var(--c-bronze), 0.9); */
-    background-color: rgba(205, 125, 45, 0.9);
+    /* background-color: rgba(205, 125, 45, 0.9); */
+    background-color: var(--bg-container);
     border-color: transparent;
+
+    animation: bronze-background 1s ease-in-out 1.5s 1 normal forwards;
 }
 .member-level-section .silver-card {
-    background-color: var(--c-silver);
+    /* background-color: var(--c-silver); */
+    background-color: var(--bg-container);
     border-color: transparent;
+
+    animation: silver-background 1s ease-in-out 2.0s 1 normal forwards;
 }
 .member-level-section .gold-card {
-    background-color: var(--c-gold);
+    /* background-color: var(--c-gold); */
+    background-color: var(--bg-container);
     border-color: transparent;
+
+    animation: gold-background 1s ease-in-out 2.5s 1 normal forwards;
 }
+
+/* ************** ANIMATION ***************** */
+@keyframes np-background {
+    0% {background-color: var(--bg-container);}
+    100% {background-color: var(--c-white);}
+}
+@keyframes bronze-background {
+    0% {background-color: var(--bg-container);}
+    100% {background-color: rgba(205, 125, 45, 0.9);}
+}
+@keyframes silver-background {
+    0% {background-color: var(--bg-container);}
+    100% {background-color: var(--c-silver);}
+}
+@keyframes gold-background {
+    0% {background-color: var(--bg-container);}
+    100% {background-color: var(--c-gold);}
+}
+/* ********************************************** */
+
 
 .member-level-section button {
     font-family: sans-serif;
