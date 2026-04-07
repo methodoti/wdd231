@@ -1,0 +1,96 @@
+:root {
+    /* https://coolors.co/00adb5-eeeeee-1b262c-27373f-ffb000-39ff14 */
+
+    /* =========================================
+       LEVEL 1: PALETTE (The Colors)
+       ========================================= */
+    /* Primary Color */ 
+    --c-tropical-teal : #00ADB5;
+    /* Secondary Color */
+    --c-platinum: #EEEEEE;
+    /* Accent Color */
+    --c-amber-flame: #FFB000;
+    /* Background Color */
+    --c-jet-black: #1B262C;
+    /* Surface Color */
+    --c-slate-black: #27373F;
+    /* Success Color */
+    --c-laser-green: #39FF14;
+    
+    --c-pure-white: #FFFFFF;
+    --c-absolute-black: #000000;
+
+
+    /* =============================================================
+       LEVEL 2: CATEGORIES (Where they go)
+       ============================================================= */
+    
+    /* 1. PRIMARY COLOR (Branding e Identity) */
+    --primary-color: var(--c-tropical-teal);
+    --header-bg: var(--primary-color);
+    --footer-bg: var(--primary-color);
+
+    /* 2. ADDITIONAL COLORS (Secondary & Accent) */
+    --secondary-color: var(--c-platinum);
+    --accent-color: var(--c-amber-flame);
+    --border-color: var(--c-tropical-teal);
+
+
+    /* 3. BACKGROUND COLORS (Containers e Sections) */
+    --bg-page: var(--c-slate-black);
+    --bg-card: var(--c-jet-black);
+
+    /* 4. TYPEFACE COLORS (Typography) */
+    --text-primary: var(--c-platinum);
+    --text-heading: var(--c-jet-black);
+    --text-heading-on-dark: var(--primary-color);
+    --text-on-dark: var(--c-pure-white);
+    --text-success: var(--c-laser-green);
+}
+
+
+h1, h2, h3 {
+    font-family: "Kode Mono", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--bg-page);
+}
+
+header {
+    background-color: var(--header-bg);
+    text-align: center;
+    align-content: center;
+    height: 100px;
+    color: var(--text-heading);
+}
+
+main {
+    /* background-color: var(--bg-page); */
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+h2 {
+    color: var(--text-heading-on-dark);
+    /* color: white; */
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+p {
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+section {
+    border-left: 4px solid var(--accent-color);
+    background-color: var(--bg-card);
+    padding: 20px;
+    margin: 0 0 20px 0;
+}
