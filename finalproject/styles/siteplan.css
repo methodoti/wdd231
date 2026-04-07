@@ -97,7 +97,7 @@ section {
 
 .kode {
     font-family: "Kode Mono", Verdana, Geneva, Tahoma, sans-serif;
-    color: var(--text-heading-on-dark);
+    /* color: var(--text-heading-on-dark); */
 }
 
 .doto {
