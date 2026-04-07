@@ -94,3 +94,23 @@ section {
     padding: 20px;
     margin: 0 0 20px 0;
 }
+
+.kode {
+    font-family: "Kode Mono", Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--text-heading-on-dark);
+}
+
+.doto {
+    font-family: Doto, Arial, Helvetica, sans-serif;
+    color: var(--text-success);
+    font-weight: 600;
+}
+
+.desktop {
+    max-width: 750px;
+    width: 100%;
+}
+
+.mobile {
+    width: 50%;
+}
