@@ -1009,11 +1009,11 @@ input[type=submit]:hover {
     background-color: rgb(0 0 0 / 50%);
 }
 
-/*  =========================================
+/*  -----------------------------------------
     THANKYOU.HTML
     -----------------------------------------
     Chamber Membership Response Page
-    ========================================= */
+    ----------------------------------------- */
 
     .thankyou-page {
         padding: 10px;
@@ -1040,3 +1040,30 @@ input[type=submit]:hover {
     .thankyou-page #results {
         padding: 15px 0;
     }
+
+/*  =========================================
+    DISCOVER.HTML
+    -----------------------------------------
+    Chamber Membership Discover Page
+    ========================================= */
+
+/**************** MAIN ****************/
+.discover-page {
+    padding: 10px;
+    /* margin: 0 auto; */
+    /* background-color: red; */
+}
+
+.discover-page h1 {
+    padding: 0;
+}
+
+.discover-page > div {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;    
+    
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px dashed blue; */
+}
