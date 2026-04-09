@@ -8,6 +8,8 @@ function displayItems(itemsArray) {
     itemsArray.forEach(element => {
         console.log(element);
 
+        const theCard = document.createElement("div");
+
         const title = document.createElement("h2");
         title.textContent = element.name;
         
@@ -16,7 +18,7 @@ function displayItems(itemsArray) {
         figure.alt = element.name;
         figure.id = "teste";
 
-        const address = document.createElement("span");
+        const address = document.createElement("address");
         address.textContent = element.address;
 
         const paragraph = document.createElement("p");
@@ -26,13 +28,13 @@ function displayItems(itemsArray) {
         const button = document.createElement("button");
         button.textContent = "Learn More";
 
+        theCard.appendChild(title);
+        theCard.appendChild(figure);
+        theCard.appendChild(address);
+        theCard.appendChild(paragraph);
+        theCard.appendChild(button);
 
-
-        itemCards.appendChild(title);
-        itemCards.appendChild(figure);
-        itemCards.appendChild(address);
-        itemCards.appendChild(paragraph);
-        itemCards.appendChild(button);
+        itemCards.appendChild(theCard);
     });
 
 }

@@ -1065,5 +1065,124 @@ input[type=submit]:hover {
     
     /* justify-content: space-around;
     align-items: center; */
-    border: 2px dashed blue;
+    /* border: 2px dashed blue; */
 }
+
+#itemCards {
+    display: grid;
+    gap: 10px;
+    /* grid-template-areas: 
+    ""
+    ""
+    ""
+    ""
+    ""; */
+}
+
+
+#itemCards div {
+    
+    display: grid;
+    /* grid-area: d; */
+    /* gap: 10px; */
+    grid-template-areas: 
+    "title"
+    "photo"
+    "desc"
+    "add"
+    "button";
+    /* border: 2px dashed green; */
+    border: 1px solid var(--border-main);
+    border-radius: 8px;
+    background-color: var(--bg-container);
+    /* padding: 20px; */
+    /* justify-items: center; */
+    /* text-align: center; */
+}
+
+#itemCards h2 {
+    color: var(--text-link);
+    margin-left: 10px;
+    /* margin: 0; */
+    /* font-size: 1.2rem; */
+    grid-area: title;
+}
+
+#itemCards img {
+    grid-area: photo;
+    /* margin: 10px; */
+}
+
+#itemCards address {
+    font-family: Roboto, Helvetica, sans-serif;
+    /* font-style: normal; */
+    grid-area: add;
+    margin: 1rem 0 1rem 10px;
+    
+}
+
+#itemCards p {
+    grid-area: desc;
+    margin-left: 10px;
+}
+
+#itemCards button {
+    grid-area: button;
+    color: var(--text-on-dark);
+    background-color: var(--brand-secondary);
+    font-family: sans-serif;
+    height: 44px;
+    width: 90%;
+    border: none;
+    border-radius: 30px;
+    justify-self: center;
+    margin: 10px;
+}
+
+#itemCards button:hover {
+    text-shadow: 0 0 8px #FFD700;
+    /* color: #FFD700; */
+}
+
+
+
+@media (max-width: 640px) {  
+        /* background-color: blue; */
+    #itemCards div {
+        grid-template-areas: 
+        "title"
+        "photo"
+        "desc"
+        "add"
+        "button";            
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    
+    #itemCards div {
+        grid-template-areas: 
+        "title title"
+        "photo desc"
+        "photo add"
+        "button button";            
+    }
+    
+}
+
+@media (min-width: 1025px) {
+    
+    #itemCards {
+        grid-template-areas: 
+        "d d";
+    }
+
+    #itemCards div {
+        grid-template-areas: 
+        "title ."
+        "photo desc"
+        "photo add"
+        "button button";              
+    }
+    
+} 
