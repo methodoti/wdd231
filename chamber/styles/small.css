@@ -90,7 +90,7 @@ p {
 }
 
 header, main, nav, footer {
-    min-width: 320px;
+    min-width: 300px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -1179,7 +1179,7 @@ input[type=submit]:hover {
 
     #itemCards div {
         grid-template-areas: 
-        "title ."
+        "title title"
         "photo desc"
         "photo add"
         "button button";              
