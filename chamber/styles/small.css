@@ -1060,10 +1060,10 @@ input[type=submit]:hover {
 
 .discover-page > div {
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;    
+    /* display: flex;
+    flex-direction: column;     */
     
-    justify-content: space-around;
-    align-items: center;
-    /* border: 2px dashed blue; */
+    /* justify-content: space-around;
+    align-items: center; */
+    border: 2px dashed blue;
 }
