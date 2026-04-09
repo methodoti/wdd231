@@ -45,6 +45,6 @@ export const interestItems = [
         "name": "Gonçalo de Carvalho Street",
         "address": "Rua Gonçalo de Carvalho - Independência, Porto Alegre - RS",
         "description": "Internationally recognized as one of the world's most beautiful streets, it features a stunning natural tunnel of Tipuana trees spanning several blocks.",
-        "photo_url": "gonçalo-de-carvalho.webp"
+        "photo_url": "goncalo-de-carvalho.webp"
     }
 ]
