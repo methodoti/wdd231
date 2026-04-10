@@ -127,3 +127,20 @@
         font-size: 1.2rem;
     }
 }
+
+@media screen and (min-width: 1025px) {
+    
+    #itemCards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #itemCards div {
+        grid-template-areas: 
+        "photo title"
+        "photo desc"
+        "photo add"
+        "button button";              
+    }
+    
+} 

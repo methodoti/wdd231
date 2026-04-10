@@ -1048,13 +1048,14 @@ input[type=submit]:hover {
     ========================================= */
 
 /**************** MAIN ****************/
-.discover-page {
-    padding: 10px;
+/* .discover-page { */
+    /* padding: 10px; */
     /* margin: 0 auto; */
     /* background-color: red; */
-}
+/* } */
 
 .discover-page h1 {
+    margin: 10px;
     padding: 0;
 }
 
@@ -1068,32 +1069,27 @@ input[type=submit]:hover {
     /* border: 2px dashed blue; */
 }
 
-#itemCards {
+/* #itemCards {
     display: grid;
     gap: 10px;
-    /* grid-template-areas: 
-    ""
-    ""
-    ""
-    ""
-    ""; */
-}
+} */
 
 
 #itemCards div {
-    
+    margin: 1rem 10px;
     display: grid;
     /* grid-area: d; */
     /* gap: 10px; */
-    grid-template-areas: 
+    /* grid-template-areas: 
     "title"
     "photo"
     "desc"
     "add"
-    "button";
+    "button"; */
     /* border: 2px dashed green; */
     border: 1px solid var(--border-main);
     border-radius: 8px;
+    overflow: hidden;
     background-color: var(--bg-container);
     /* padding: 20px; */
     /* justify-items: center; */
@@ -1101,8 +1097,9 @@ input[type=submit]:hover {
 }
 
 #itemCards h2 {
+    margin: 1rem 10px;
     color: var(--text-link);
-    margin-left: 10px;
+    /* margin-left: 10px; */
     /* margin: 0; */
     /* font-size: 1.2rem; */
     grid-area: title;
@@ -1110,23 +1107,29 @@ input[type=submit]:hover {
 
 #itemCards img {
     grid-area: photo;
+    width: 100%;
+    /* max-width: 300px; */
+    justify-self: center;
     /* margin: 10px; */
 }
 
 #itemCards address {
+    margin: 1rem 10px;
     font-family: Roboto, Helvetica, sans-serif;
     /* font-style: normal; */
     grid-area: add;
-    margin: 1rem 0 1rem 10px;
+    /* margin: 1rem 0 1rem 10px; */
     
 }
 
 #itemCards p {
+    margin: 1rem 10px;
     grid-area: desc;
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 
 #itemCards button {
+    margin: 1rem 10px;
     grid-area: button;
     color: var(--text-on-dark);
     background-color: var(--brand-secondary);
@@ -1136,7 +1139,7 @@ input[type=submit]:hover {
     border: none;
     border-radius: 30px;
     justify-self: center;
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 #itemCards button:hover {
@@ -1146,7 +1149,7 @@ input[type=submit]:hover {
 
 
 
-@media (max-width: 640px) {  
+@media screen and (max-width: 640px) {  
         /* background-color: blue; */
     #itemCards div {
         grid-template-areas: 
@@ -1158,31 +1161,31 @@ input[type=submit]:hover {
     }
 }
 
-@media (min-width: 641px) and (max-width: 1024px) {
+/* @media (min-width: 641px) and (max-width: 1024px) {
     
     #itemCards div {
         grid-template-areas: 
-        "title title"
+        "photo title"
         "photo desc"
         "photo add"
         "button button";            
     }
     
-}
+} */
 
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
     
     #itemCards {
-        grid-template-areas: 
-        "d d";
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
     #itemCards div {
         grid-template-areas: 
-        "title title"
+        "photo title"
         "photo desc"
         "photo add"
         "button button";              
     }
     
-} 
+}  */

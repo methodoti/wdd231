@@ -1,0 +1,11 @@
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    
+    #itemCards div {
+        grid-template-areas: 
+        "photo title"
+        "photo desc"
+        "photo add"
+        "button button";            
+    }
+    
+}
