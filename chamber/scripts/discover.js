@@ -27,7 +27,7 @@ function displayItems(itemsArray) {
             figure.setAttribute("loading", "lazy");
         }
         // figure.setAttribute("loading", "lazy");
-
+        
         const address = document.createElement("address");
         address.textContent = element.address;
 
@@ -69,7 +69,7 @@ if (daysFromVisit.toFixed(0) > 1) {
     plural = "s";
 }
 
-console.log(daysFromVisit);
+// console.log(daysFromVisit);
 
 
 if (theLastVisit === 0) {
