@@ -8,4 +8,7 @@
         "button button";            
     }
     
+    #itemCards img:hover {
+        filter: saturate(30%);
+    }
 }
