@@ -19,8 +19,14 @@ function displayItems(itemsArray) {
         figure.alt = element.name;
         figure.width = 300;
         figure.height = 200;
-        // figure.id = "teste";
-        figure.setAttribute("loading", "lazy");
+        // console.log(element.name);
+        if (element.name === "Parque Farroupilha (Redenção)") {
+            // trying to fix the performance lighthouse
+            figure.setAttribute("fetchpriority", "high");
+        } else {
+            figure.setAttribute("loading", "lazy");
+        }
+        // figure.setAttribute("loading", "lazy");
 
         const address = document.createElement("address");
         address.textContent = element.address;
