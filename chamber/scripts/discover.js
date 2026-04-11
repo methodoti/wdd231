@@ -17,7 +17,10 @@ function displayItems(itemsArray) {
         const figure = document.createElement("img");
         figure.src = `images/${element.photo_url}`;
         figure.alt = element.name;
-        figure.id = "teste";
+        figure.width = 300;
+        figure.height = 200;
+        // figure.id = "teste";
+        figure.setAttribute("loading", "lazy");
 
         const address = document.createElement("address");
         address.textContent = element.address;

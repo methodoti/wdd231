@@ -128,11 +128,18 @@
     }
 }
 
+/*  =========================================
+    DISCOVER.HTML
+    -----------------------------------------
+    Chamber Membership Discover Page
+    ========================================= */
+
 @media screen and (min-width: 1025px) {
     
     #itemCards {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        /* min-height: 30vh; */
     }
 
     #itemCards div {

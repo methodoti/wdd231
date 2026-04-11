@@ -1073,7 +1073,9 @@ input[type=submit]:hover {
     display: grid;
     gap: 10px;
 } */
-
+#itemCards {
+        min-height: 100vh;
+    }
 
 #itemCards div {
     margin: 1rem 10px;
@@ -1108,6 +1110,7 @@ input[type=submit]:hover {
 #itemCards img {
     grid-area: photo;
     width: 100%;
+    height: auto;
     /* max-width: 300px; */
     justify-self: center;
     /* margin: 10px; */
