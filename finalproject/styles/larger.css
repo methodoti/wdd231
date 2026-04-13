@@ -43,16 +43,28 @@
     /**************** FOOTER ****************/
     footer {
         flex-direction: row;
+        padding: 0 20px;
     }
 
     .footer-info {
         flex: 1;
         text-align: left;
-        margin-left: 20px;
+        /* margin-left: 20px; */
     }
         .footer-date {
         flex: 1;
         text-align: right;
-        margin-right: 20px;
+        /* margin-right: 20px; */
+    }
+
+    /*=========================================
+        Home.HTML
+    =========================================== */
+
+    /**************** MAIN ****************/
+
+    .home-page h1 {
+        margin: 20px;
+        /* color: var(--text-heading-lighter); */
     }
 }
