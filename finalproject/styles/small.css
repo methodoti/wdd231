@@ -1,0 +1,290 @@
+:root {
+    /* https://coolors.co/00adb5-eeeeee-1b262c-27373f-ffb000-39ff14 */
+
+    /* =========================================
+       LEVEL 1: PALETTE (The Colors)
+       ========================================= */
+    /* Primary Color */ 
+    --c-tropical-teal : #00ADB5;
+    /* Secondary Color */
+    --c-platinum: #EEEEEE;
+    /* Accent Color */
+    --c-amber-flame: #FFB000;
+    --c-golden-polen: #FFCB5C;
+    /* Background Color */
+    --c-jet-black: #1B262C;
+    /* Surface Color */
+    --c-slate-black: #27373F;
+    /* Success Color */
+    --c-laser-green: #39FF14;
+    
+    --c-pure-white: #FFFFFF;
+    --c-absolute-black: #000000;
+
+
+    /* =============================================================
+       LEVEL 2: CATEGORIES (Where they go)
+       ============================================================= */
+    
+    /* 1. PRIMARY COLOR (Branding e Identity) */
+    --primary-color: var(--c-tropical-teal);
+    --header-bg: var(--primary-color);
+    --footer-bg: var(--primary-color);
+    
+
+    /* 2. ADDITIONAL COLORS (Secondary & Accent) */
+    /* --secondary-color: var(--c-platinum); */
+    /* --accent-color: var(--c-amber-flame); */
+    --border-color: var(--c-tropical-teal);
+    --border-color-secondary: var(--c-amber-flame);
+    --bg-button: var(--c-tropical-teal);
+    --text-button: var(--c-jet-black);
+
+    /* 3. BACKGROUND COLORS (Containers e Sections) */
+    --bg-page: var(--c-slate-black);
+    --bg-card: var(--c-jet-black);
+    /* ==>>>> pensar melhor na cor depois <<<=== */
+    --bg-card-title: var(--c-absolute-black);
+    /* ==>>>> pensar melhor na cor depois <<<=== */
+    /* --bg-nav: var(--c-amber-flame); */
+
+    /* 4. TYPEFACE COLORS (Typography) */
+    --text-primary: var(--c-platinum);
+    --text-heading-dark: var(--c-jet-black);
+    --text-heading-light: var(--c-tropical-teal);
+    --text-heading-lighter: var(--c-platinum);
+    /* --text-on-dark: var(--c-pure-white); */
+
+    /* 2. NAVIGATION */
+    --nav-bg: var(--c-golden-polen);
+    --nav-text: var(--c-jet-black);
+    --nav-hover: var(--c-amber-flame);
+    --nav-active: var(--c-white);   
+
+    /* 5. CHECK LIST
+       ----------------
+        TYPES:
+            checkpoint - normal check list item, default = ex: APU .... START
+            info - sub-items on checkpoint (treat like checkpoint for now)
+            subtitle - subtitle = ex: Passing TA
+            sim-action - sepcial title to grabb attention on think to do on the aircraft, like 777 = (PREFILHT CHECKLIST)
+            atc - treat like checkpoint for now. 
+    */
+    /* type: checkpoint */
+    --cl-chackpoint: var(--c-platinum);
+    /* type: info */
+    /* ==>>>> pensar melhor na cor depois <<<=== */
+    --cl-info: var(--c-tropical-teal);
+    /* ==>>>> será que posso usar o heading aqui? tipo um h3? <<<=== */
+    /* type: subtitle */
+    --cl-subtitle: var(--c-tropical-teal);
+    /* type: sim-action */
+    --cl-sim-action: var(--c-pure-white);
+    /* type: ATC */
+    --cl-atc: var(--c-amber-flame);
+
+    /* completed for type: checkpoint, info, sim-actio, atc */
+    --cl-success: var(--c-laser-green);
+}
+
+/**************** SITE ****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-page);
+}
+
+h1, h2 {
+    font-family: "Kode Mono", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+header, main, nav, footer {
+    min-width: 300px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/**************** HEADER ****************/
+header {
+    /* padding: 0 10px; */
+    display: grid;
+    grid-template-columns: 60px auto 44px;
+    align-items: center;
+    background-color: var(--header-bg);
+    border-bottom: 2px solid var(--border-color-secondary);
+    color: var(--text-heading-dark);
+}
+
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 5px 0 5px 10px;
+}
+
+header span {
+    font-family: "Kode Mono", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    color: var(--text-heading-dark);
+    font-weight: bold;
+    margin: 5px 0 5px 15px;
+}
+
+/**************** HAMBURGER ****************/
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    height: 44px;
+    margin-right: 10px;
+}
+
+/* .theme::before{
+    content: "◐";
+    font-size: 1.5rem;
+    color: var(--text-heading-dark);    
+} */
+
+.hamburger {
+   
+    padding-bottom: 8px;
+}
+
+.hamburger.show {
+    padding-bottom: 5px;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+    color: var(--text-heading-dark);
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/**************** NAVIGATION ****************/
+.navigation {
+    display: none;
+    font-family: sans-serif;
+    /* background-color: var(--bg-nav); */
+    background-color: var(--nav-bg);
+    border-top: 1px solid var(--border-color-secondary);
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    width: 100%;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    text-decoration: none;
+    text-align: right;
+    color: var(--text-button);
+}
+
+.navigation a:hover {
+    background-color: var(--nav-hover);
+    color: var(--nav-text);
+}
+
+li.current a {
+    color: var(--nav-active);
+    font-weight: bold;
+}
+
+li.current a::before {
+    font-family: "Material Symbols Outlined";
+    font-size: 14px;
+    color: red;
+    /* content: "♦️"; */
+    /* content: "\e904"; */
+    content: "\e539";
+}
+
+/**************** FOOTER ****************/
+footer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    /* gap: 10px; */
+    background-color: var(--footer-bg);
+    border-top: 2px solid var(--border-color-secondary);
+    color: var(--text-heading-dark);
+    font-size: 1.1rem;
+    color: var(--c-absolute-black);
+}
+
+.footer-info {
+    flex: 1;
+    text-align: center;
+}
+
+/* .chamber-info h2 {
+    font-size: 1.1rem;
+} */
+
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 10px;
+    flex: 1;    
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--c-jet-black);
+    border-radius: 50%;
+    width: 60px; 
+    height: 60px;
+}
+
+.social img {
+    width: 42px;
+    height: 42px;
+}
+
+.footer-date {
+    flex: 1;
+    text-align: center;
+}
+
+
+
+/*=========================================
+    Home.HTML
+=========================================== */
+
+/**************** MAIN ****************/
+
+.home-page h1 {
+    margin: 10px;
+    color: var(--text-heading-lighter);
+}
