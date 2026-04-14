@@ -49,12 +49,18 @@
     .navigation li {
         min-width: 100px;
         background-color: var(--nav-bg);
-        width: 120px;
+        width: 130px;
         /* margin: 10px; */
     }
 
     .navigation a {
         text-align: center;
+    }
+
+    .navigation a:hover {
+        background-color: var(--nav-hover);
+        /* filter: saturate(30%); */
+        color: var(--nav-text);
     }
 
     /**************** FOOTER ****************/
@@ -97,6 +103,10 @@
         bottom: 20px;
     }
 
+    /* .home-page .cta:hover {
+        filter: saturate(50%);
+    } */
+
     .home-page .hero {
         height: 330px;
         width: 1200px;
@@ -129,6 +139,31 @@
         border: 1px dashed green;
     }
 
+    .home-page .choose {
+        margin: 20px;
+    }
+
+    .home-page .chooseDiv {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .home-page .chooseDiv div {
+        width: 48.25%;
+    }
+
+    /* .home-page .chooseDiv div:hover {
+        filter: saturate(50%);
+    } */
+
+    .home-page .chooseDiv div p {
+        font-family: Doto, Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
     /*=========================================
         Checklist.HTML
     =========================================== */
@@ -139,5 +174,58 @@
         margin: 20px;
         /* color: var(--text-heading-lighter); */
     }
+
+
+
+    /*=========================================
+        Add-Aircraft.HTML
+    =========================================== */
+
+    /**************** MAIN ****************/
+
+    .add-aircraft-page h1 {
+        margin: 20px;
+    }
+
+    .add-aircraft-page .addAircraft {
+        /* margin: 20px; */
+        /* display: grid;
+        grid-template-columns: 1fr; */
+        margin: 20px auto;
+        max-width: 570px;
+        gap: 20px;
+        /* border: 1px dashed green; */
+    }
+
+    /*  -----------------------------------------
+    Thankyou.HTML
+    ----------------------------------------- */
+
+    .thankyou-page > div {
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column; 
+            
+            /* justify-content: center; */
+            /* justify-content: space-around; */
+            /* align-items: center; */
+            max-width: 570px;
+            /* border: 2px dashed blue; */
+        }
+
+    .thankyou-page h1 {
+        margin: 20px;
+    }
+
+    .thankyou-page .paragraph {
+        font-size: 1.1rem;
+        line-height: 30px;
+    }
+
+    .thankyou-page #results {
+        margin: 10px 30px 0 30px;
+    }
+
+
 
 }

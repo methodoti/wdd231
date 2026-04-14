@@ -17,6 +17,7 @@
     --c-slate-black: #27373F;
     /* Success Color */
     --c-laser-green: #39FF14;
+    --c-green: #2e7d32;
     
     --c-pure-white: #FFFFFF;
     --c-absolute-black: #000000;
@@ -71,7 +72,7 @@
             atc - treat like checkpoint for now. 
     */
     /* type: checkpoint */
-    --cl-chackpoint: var(--c-platinum);
+    --cl-checkpoint: var(--c-platinum);
     /* type: info */
     /* ==>>>> pensar melhor na cor depois <<<=== */
     --cl-info: var(--c-tropical-teal);
@@ -128,6 +129,25 @@ header, main, nav, footer {
     background-color: var(--bg-card);
     flex-grow: 1;
 }
+
+/* ---- Buttons ----  */
+.buttons {
+    color: var(--c-absolute-black);
+    background-color: var(--bg-button);
+    height: 44px;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+.buttons:hover {
+    filter: saturate(50%);
+}
+.buttonsRounded {
+    border-radius: 8px
+}
+
+
 
 
 /**************** HEADER ****************/
@@ -227,11 +247,7 @@ header span {
     color: var(--text-button);
 }
 
-.navigation a:hover {
-    background-color: var(--nav-hover);
-    /* filter: saturate(30%); */
-    color: var(--nav-text);
-}
+
 
 li.current a {
     color: var(--nav-active);
@@ -241,7 +257,7 @@ li.current a {
 li.current a::before {
     font-family: "Material Symbols Outlined";
     font-size: 15px;
-    color: red;
+    color: var(--c-green);
     /* content: "♦️"; */
     /* content: "\e904"; */
     content: "\e539";
@@ -338,29 +354,15 @@ footer {
     font-family: sans-serif;
     font-weight: bold;
     text-decoration: none;
-    height: 44px;
-    /* width: 170px;     */
+    /* height: 44px; */
     width: 16%;
     min-width: 150px;    
-    text-align: center;
-    align-content: center;
-    /* border: 1px solid var(--border-soft); */
-    border-radius: 8px;
-    /* box-shadow: 5px 5px 8px var(--shadow-main); */
-    /* color: var(--text-link); */
-    color: var(--c-absolute-black);
-    /* color: var(--c-amber-flame); */
-    background-color: var(--bg-button);
+    /* text-align: center;
+    align-content: center; */
+    
 }
 
-.home-page .cta:hover {
-    /* box-shadow: 5px 5px 1rem #FFD700; */
-    /* background-color: var(--bg-card); */
-    filter: saturate(50%);
-    /* color: var(--c-absolute-black); */
-    /* text-shadow: 0 0 8px #FFD700; */
-    /* color: #FFD700; */
-}
+
 
 .home-page .welcomeLastflight {
     margin: 10px;
@@ -408,6 +410,39 @@ footer {
     font-weight: normal;
 }
 
+.home-page .choose {
+    margin: 10px;
+    /* display: grid; */
+    /* grid-template-columns: 1fr; */
+    /* gap: 10px; */
+}
+
+.home-page .chooseDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.home-page .chooseDiv div {
+    display: flex;
+    font-family: Doto, Arial, Helvetica, sans-serif;
+    /* background-color: var(--bg-button); */
+    /* color: var(--c-absolute-black); */
+    /* height: 44px; */
+    min-width: 100px;
+    align-items: center;
+    justify-content: center;
+    /* cursor: pointer; */
+}
+
+
+
+.home-page .chooseDiv div p {
+    font-family: Doto, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
 
 /*=========================================
     Checklist.HTML
@@ -419,3 +454,169 @@ footer {
     margin: 10px;
     color: var(--text-heading-lighter);
 }
+
+
+
+
+
+
+/*=========================================
+    Add-Aircraft.HTML
+=========================================== */
+
+/**************** MAIN ****************/
+
+.add-aircraft-page h1 {
+    margin: 10px;
+    color: var(--text-heading-lighter);
+}
+
+.add-aircraft-page > div {
+    /* margin: 0 auto;
+    display: flex;
+    flex-direction: column;     */
+    
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    /* max-width: 964px; */
+    /* border: 2px dashed blue; */
+}
+
+.add-aircraft-page .addAircraft {
+    /* margin: 0 auto;
+    max-width: 964px; */
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    /* border: 1px dashed green; */
+}
+
+.add-aircraft-page .addAircraft p {
+    margin: 10px 0;
+    color: var(--text-primary);
+}
+
+/* ---- FORM ---- */
+
+.request-form {
+     /* margin: 0 auto; */
+    /* margin: 1rem 2%; */
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+.request-form label {
+    display: block;
+    font-size: .8rem;
+    padding-top: .2rem;
+    color: var(--text-primary);
+}
+
+input[type=text],
+input[type=tel],
+input[type=email],
+textarea {
+    display: block;
+    width: 100%;
+    /* height: 44px; */
+    margin: .1rem 0 1rem 0 ;
+    padding: .3rem;
+    border: 1px solid var(--text-button);
+    border-radius: 4px;
+    border-right-width: .5rem;
+    font-size: 1rem;
+    color: var(--text-button);
+}
+
+input[type=text],
+input[type=email],
+input[type=tel] {
+    height: 44px;
+}
+
+/* textarea {
+    margin: .1rem 0 0 0;
+} */
+
+input:required, fieldset:has(input:required:invalid) {
+    border-right-color: #c50000;
+}
+input:focus, textarea:focus, fieldset:focus-within {
+    border-right-color: var(--nav-hover); 
+    outline:none;
+    /* outline-color: var(--brand-primary); */
+}
+input:required:valid, fieldset:has(input:required:valid) {
+    border-right-color: var(--c-green)
+    /* #2e7d32;; */
+}
+
+form div {
+    display: flex;
+    justify-content: center;
+}
+
+input[type=submit] {
+    border: none;
+    /* background-color: var(--bg-accent); */
+    /* color: var(--text-on-dark); */
+    padding: .80rem 2rem;
+    /* margin: 1rem auto; */
+    /* border-radius: 8px; */
+    font-family: sans-serif;
+    font-weight: bold;
+    width: 200px;
+}
+
+/*  -----------------------------------------
+    Thankyou.HTML
+    ----------------------------------------- */
+
+    .thankyou-page > div {
+        margin: 10px;
+        display: flex;
+        flex-direction: column; 
+        
+        /* justify-content: center; */
+        /* justify-content: space-around; */
+        /* align-items: center; */
+        
+        /* border: 2px dashed blue; */
+    }
+
+    .thankyou-page h1 {
+        margin: 10px;
+        color: var(--text-heading-lighter);
+    }
+    /* .thankyou-page {
+        padding: 10px;
+    } */
+
+    /* .thankyou-page h1 {
+        padding: 0 0 10px 0;
+    } */
+
+    .thankyou-page .paragraph {
+        margin: 0px;
+        color: var(--text-primary);
+        font-family: Roboto, Helvetica, sans-serif;
+        /* font-size: 1.3rem; */
+        /* text-align: center; */
+        /* font-weight: bold; */
+        font-size: 1rem;
+        line-height: 25px;
+        /* margin: 1rem 0; */
+        /* padding-top: 10px; */
+    }
+
+    /* .thankyou-page p {
+        font-size: 1.1rem;
+    } */
+
+    .thankyou-page #results {
+        color: var(--c-golden-polen);
+        margin: 0 10px;
+        font-weight: normal;
+        /* color: red; */
+    }
