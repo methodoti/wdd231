@@ -264,9 +264,16 @@ footer {
     color: var(--c-absolute-black);
 }
 
+.footer-info, .footer-date {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
 .footer-info {
-    flex: 1;
-    text-align: center;
+    /* flex: 1; */
+    /* text-align: center; */
+    /* display: flex; */
 }
 
 /* .chamber-info h2 {
@@ -296,8 +303,8 @@ footer {
 }
 
 .footer-date {
-    flex: 1;
-    text-align: center;
+    /* flex: 1; */
+    /* text-align: center; */
 }
 
 
@@ -402,3 +409,13 @@ footer {
 }
 
 
+/*=========================================
+    Checklist.HTML
+=========================================== */
+
+/**************** MAIN ****************/
+
+.checklist-page h1 {
+    margin: 10px;
+    color: var(--text-heading-lighter);
+}

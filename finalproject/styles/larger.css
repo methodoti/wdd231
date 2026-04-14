@@ -63,15 +63,22 @@
         padding: 0 20px;
     }
 
+    .footer-info, .footer-date {
+    /* align-items:start; */
+    justify-content: left;
+}
+
     .footer-info {
         flex: 1;
-        text-align: left;
+        /* text-align: left; */
         /* margin-left: 20px; */
+        justify-content: left;
     }
         .footer-date {
         flex: 1;
-        text-align: right;
+        /* text-align: right; */
         /* margin-right: 20px; */
+        justify-content: right;
     }
 
     /*=========================================
@@ -120,6 +127,17 @@
         height: 102px;
         width: 244px;
         border: 1px dashed green;
+    }
+
+    /*=========================================
+        Checklist.HTML
+    =========================================== */
+
+    /**************** MAIN ****************/
+
+    .checklist-page h1 {
+        margin: 20px;
+        /* color: var(--text-heading-lighter); */
     }
 
 }
