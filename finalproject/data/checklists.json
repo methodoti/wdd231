@@ -1,0 +1,96 @@
+{
+  "aircrafts": [
+    {
+      "aircraftId": "b737-800",
+      "aircraftName": "Boeing 737-800",
+      "checklists": [
+        {
+          "categoryName": "Pre-Flight Checklist",
+          "items": [
+            { "type": "checkpoint", "task": "Battery", "action": "GUARD CLOSED" },
+            { "type": "checkpoint", "task": "APU", "action": "START" },
+            { "type": "atc", "task": "ATC Clearance (IFR)", "action": "REQUEST" }
+          ]
+        },
+        {
+          "categoryName": "FMC Configuration",
+          "items": [
+            { "type": "checkpoint", "task": "RTE Page 1/2", "action": "SET" },
+            { "type": "info", "task": "Origin and Dest", "action": "SET" },
+            { "type": "info", "task": "Payload and Fuel", "action": "SET" }
+          ]
+        },
+        {
+          "categoryName": "After Take-off Checklist",
+          "items": [
+            { "type": "checkpoint", "task": "Gear Lever", "action": "OFF POSITION" },
+            { "type": "subtitle", "text": "Passing TA (Transition-Altitude)" },
+            { "type": "checkpoint", "task": "Altimeter", "action": "SET STD (29.92)" },
+            { "type": "subtitle", "text": "Passing 10,000 Feet" },
+            { "type": "checkpoint", "task": "Landing Lights", "action": "OFF" }
+          ]
+        }
+      ]
+    },
+    {
+      "aircraftId": "atr-72-600",
+      "aircraftName": "ATR 72-600",
+      "checklists": [
+        {
+          "categoryName": "Cockpit Preparation",
+          "items": [
+            { "type": "checkpoint", "task": "Battery", "action": "ON" },
+            { "type": "info", "task": "Engine Start", "action": "START A & B" },
+            { "type": "checkpoint", "task": "Prop Brake", "action": "ON" }
+          ]
+        },
+        {
+          "categoryName": "Before Take-off",
+          "items": [
+            { "type": "atc", "task": "ATC Clearance (Depart)", "action": "REQUEST" },
+            { "type": "checkpoint", "task": "Strobe Light", "action": "ON" },
+            { "type": "checkpoint", "task": "TOGA", "action": "ON" }
+          ]
+        },
+        {
+          "categoryName": "Descent Checklist",
+          "items": [
+            { "type": "checkpoint", "task": "Thrust", "action": "SET MANUAL" },
+            { "type": "subtitle", "text": "Below 10'000 ft" },
+            { "type": "checkpoint", "task": "Landing Lights", "action": "ON" }
+          ]
+        }
+      ]
+    },
+    {
+      "aircraftId": "b777-300er",
+      "aircraftName": "Boeing 777-300er",
+      "checklists": [
+        {
+          "categoryName": "Cockpit Preparation",
+          "items": [
+            { "type": "checkpoint", "task": "Battery", "action": "ON" },
+            { "type": "info", "task": "Oxygen: Crew Press", "action": "> 1000" },
+            { "type": "info", "task": "Oil QTY", "action": "> 17" }
+          ]
+        },
+        {
+          "categoryName": "EFIS/MCP Configuration",
+          "items": [
+            { "type": "checkpoint", "task": "EFIS: QNH", "action": "SET" },
+            { "type": "checkpoint", "task": "Auto Brake", "action": "RTO" },
+            { "type": "sim-action", "task": "(PREFLIGHT CHECKLIST)", "action": "EXECUTE" }
+          ]
+        },
+        {
+          "categoryName": "Before Start Procedure",
+          "items": [
+            { "type": "atc", "task": "ATC Clearance (IFR)", "action": "REQUEST" },
+            { "type": "checkpoint", "task": "APU", "action": "CHECK ON/START" },
+            { "type": "sim-action", "task": "(BEFORE START CHECKLIST)", "action": "EXECUTE" }
+          ]
+        }
+      ]
+    }
+  ]
+}
