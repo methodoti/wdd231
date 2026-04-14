@@ -87,7 +87,7 @@
     --cl-success: var(--c-laser-green);
 }
 
-/**************** SITE ****************/
+
 * {
     box-sizing: border-box;
 }
@@ -100,6 +100,8 @@ h1, h2 {
     font-family: "Kode Mono", Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+
 p {
     font-family: Roboto, Arial, Helvetica, sans-serif;
 }
@@ -109,6 +111,24 @@ header, main, nav, footer {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.cardTitle {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-card-title);
+    color: var(--text-heading-light);
+    height: 34px;
+    padding-left: 10px;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.cards {
+    padding: 10px;
+    background-color: var(--bg-card);
+    flex-grow: 1;
+}
+
 
 /**************** HEADER ****************/
 header {
@@ -209,6 +229,7 @@ header span {
 
 .navigation a:hover {
     background-color: var(--nav-hover);
+    /* filter: saturate(30%); */
     color: var(--nav-text);
 }
 
@@ -219,12 +240,14 @@ li.current a {
 
 li.current a::before {
     font-family: "Material Symbols Outlined";
-    font-size: 14px;
+    font-size: 15px;
     color: red;
     /* content: "♦️"; */
     /* content: "\e904"; */
     content: "\e539";
-}
+    margin-right: 2px;
+    vertical-align: -2px;
+    }
 
 /**************** FOOTER ****************/
 footer {
@@ -289,3 +312,93 @@ footer {
     margin: 10px;
     color: var(--text-heading-lighter);
 }
+
+.home-page .hero {
+    position: relative;
+}
+
+.home-page .hero img {
+    width: 100%;
+    height: auto;
+    min-height: 174px;
+}
+
+.home-page .cta {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    height: 44px;
+    /* width: 170px;     */
+    width: 16%;
+    min-width: 150px;    
+    text-align: center;
+    align-content: center;
+    /* border: 1px solid var(--border-soft); */
+    border-radius: 8px;
+    /* box-shadow: 5px 5px 8px var(--shadow-main); */
+    /* color: var(--text-link); */
+    color: var(--c-absolute-black);
+    /* color: var(--c-amber-flame); */
+    background-color: var(--bg-button);
+}
+
+.home-page .cta:hover {
+    /* box-shadow: 5px 5px 1rem #FFD700; */
+    /* background-color: var(--bg-card); */
+    filter: saturate(50%);
+    /* color: var(--c-absolute-black); */
+    /* text-shadow: 0 0 8px #FFD700; */
+    /* color: #FFD700; */
+}
+
+.home-page .welcomeLastflight {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    /* border: 1px dashed green; */
+}
+
+
+
+.home-page .welcomeLastflight p {
+    margin: 10px 0;
+    color: var(--text-primary);
+}
+
+/* vertical alignment, the div's fill up the space */
+.welcomeSection, .lastflightSection {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start; */
+}
+
+
+.home-page .lastflightDiv {
+    /* padding: 10px; */
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 2fr;
+}
+
+.home-page .lastflightImg div {
+    height: 52px;
+    width: 128px;
+    border: 1px dashed green;
+}
+
+.home-page .lastflightAircraft p {
+    font-weight: bold;
+    margin: 0;
+    line-height: 24px;
+}
+
+.home-page .lastflightAircraft span {
+    font-weight: normal;
+}
+
+

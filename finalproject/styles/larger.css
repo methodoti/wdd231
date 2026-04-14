@@ -1,9 +1,26 @@
 @media screen and (min-width: 768px) {
+    
+    /**************** SITE ****************/
+    .cardTitle {
+        /* padding: 20px; */
+        height: 44px;
+        font-size: 1.5rem;
+    }
+    
     /**************** HEADER ****************/
     header {
         grid-template-columns: 60px auto auto;
     }
     
+    header img {
+        margin: 5px 0 5px 20px;
+    }
+
+    header span {
+        margin: 5px 0 5px 25px;
+    }
+
+
     /**************** HAMBURGER ****************/
     .hamburger {
         display: none;
@@ -67,4 +84,42 @@
         margin: 20px;
         /* color: var(--text-heading-lighter); */
     }
+
+    .home-page .cta {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .home-page .hero {
+        height: 330px;
+        width: 1200px;
+        border: 2px dashed green;
+    }
+
+
+    .home-page .hero img {
+        width: 100%;
+        /* width: 1200px; */
+        /* max-width: 1200px; */
+        /* height: auto; */
+        /* height: 330px; */
+        /* max-height: 330px; */
+        /* border: 2px dashed green; */
+    }
+
+    .home-page .welcomeLastflight {
+        margin: 20px;
+        grid-template-columns: 1fr 1fr;
+        /* display: flex; */
+        gap: 20px;
+        /* padding: 10px; */
+    }
+    
+
+    .home-page .lastflightImg div {
+        height: 102px;
+        width: 244px;
+        border: 1px dashed green;
+    }
+
 }
