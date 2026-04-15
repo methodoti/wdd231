@@ -6,7 +6,11 @@
         height: 44px;
         font-size: 1.5rem;
     }
-    
+
+    /* .buttons {
+        color: red;
+    } */
+
     /**************** HEADER ****************/
     header {
         grid-template-columns: 60px auto auto;
@@ -150,15 +154,18 @@
         justify-content: space-between;
     }
 
-    .home-page .chooseDiv div {
+    .home-page .chooseDiv .buttons {
         width: 48.25%;
+        /* width: 320px; */
+        /* min-width: 100px; */
+        /* color: red; */
     }
 
     /* .home-page .chooseDiv div:hover {
         filter: saturate(50%);
     } */
 
-    .home-page .chooseDiv div p {
+    .home-page .chooseDiv .buttons p {
         font-family: Doto, Arial, Helvetica, sans-serif;
         font-weight: 700;
         font-size: 1.5rem;

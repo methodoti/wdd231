@@ -424,7 +424,7 @@ footer {
     gap: 10px;
 }
 
-.home-page .chooseDiv div {
+.home-page .chooseDiv .buttons {
     display: flex;
     font-family: Doto, Arial, Helvetica, sans-serif;
     /* background-color: var(--bg-button); */
@@ -438,7 +438,7 @@ footer {
 
 
 
-.home-page .chooseDiv div p {
+.home-page .chooseDiv .buttons p {
     font-family: Doto, Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 1.25rem;
