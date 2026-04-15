@@ -98,7 +98,7 @@ body {
     background-color: var(--bg-page);
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: "Kode Mono", Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -319,10 +319,10 @@ footer {
     height: 42px;
 }
 
-.footer-date {
+/* .footer-date { */
     /* flex: 1; */
     /* text-align: center; */
-}
+/* } */
 
 
 
@@ -451,9 +451,22 @@ footer {
 
 /**************** MAIN ****************/
 
+/* .checklist-page { */
+    /* margin: 10px; */
+/* } */
+
 .checklist-page h1 {
     margin: 10px;
     color: var(--text-heading-lighter);
+}
+
+.checklist-page h2 {
+    color: var(--text-heading-lighter);
+    text-align: center;
+}
+
+.checklist-page > label {
+    margin-left: 10px;
 }
 
 .checklist-page #select-aircraft {
@@ -463,6 +476,7 @@ footer {
     border-right-width: 0;
     font-family: sans-serif;
     font-weight: bold;
+    /* margin-left: 10px; */
 }
 
 .checklist-page .chekclistMainDiv {
@@ -475,9 +489,26 @@ footer {
     /* border: 1px dashed green; */
 }
 
+
+
 .checklist-page .chekclistMainDiv p {
     margin: 10px 0;
     color: var(--text-primary);
+}
+
+/* .categorySection {
+    display: flex;
+    flex-direction: column;
+} */
+
+.resetAll {
+    border: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    width: 200px;
+    margin: 10px;
+    justify-content: center;
+    /* padding: .80rem 2rem; */
 }
 
 .checklist-page .categoryTitleDiv {
@@ -488,11 +519,13 @@ footer {
     cursor: pointer;
 }
 
-.checklist-page .categoryTitleDiv h2 {
+/* .checklist-page .categoryTitleDiv h2 { */
+.checklist-page .categoryTitleDiv h3 {
     padding: 0;
 }
 
-/* ---- BUTTON ---- */
+
+/* ---- BUTTON Up/Down ---- */
 .checklist-page .categoryButton {
     background: none;
     border: none;

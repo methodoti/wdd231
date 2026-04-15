@@ -9,46 +9,23 @@ const mySelection = new URLSearchParams(getString);
 // console.log(mySelection);
 // console.log(mySelection.get("aircraftId"));
 
+
+
 const aircraftSelector = document.querySelector("#select-aircraft");
-const testP = document.querySelector("#test");
+// const testP = document.querySelector("#test");
+const h2 = document.querySelector("h2");
 
 
 
 // function to initialize (need to be ASYNC to use AWAIT)
 async function init() {
-
     // ask for the data and wait (AWAIT) for the delivery
     const aircrafts = await getChecklistData();
-
     // now, with the data returned, display on screen
     displayChecklist(aircrafts);
 }
 
-init();
-
-// if (getString !== "") {
-//     aircraftSelector.value = mySelection.get("aircraftId");
-//     aircraftSelector.dispatchEvent(new Event("change"));
-//     console.log(mySelection.get("aircraftId"));
-// }
-
-// const file = "data/checklist.json";
-
-// // console.log(file);
-
-// const chooseDiv = document.querySelector("#choose-div");
-
-// // alert("teste");
-
-
-// async function getChecklistData() {
-//     const response = await fetch(file);
-//     const data = await response.json();
-//     console.log(data.aircrafts);  //just to see the aircraft data
-//     displayChecklist(data.aircrafts);
-// }
-
-// getChecklistData();
+init(); // inicialize the imported data
 
 const displayChecklist = (aircrafts) => {
     aircrafts.forEach((plane) => {
@@ -61,23 +38,7 @@ const displayChecklist = (aircrafts) => {
         // used by the system on get
         newOption.value = plane.aircraftId;
 
-        aircraftSelector.appendChild(newOption);
-
-
-
-        // const div = document.createElement("div");
-        // div.classList.add("buttons");
-
-        // const p = document.createElement("p");
-        // p.textContent = plane.aircraftName;
-
-        // div.addEventListener("click", function () {
-        //     console.log(plane.aircraftName);
-        // })
-
-        // div.appendChild(p);
-        // chooseDiv.appendChild(div);
-        
+        aircraftSelector.appendChild(newOption);        
     });
     if (getString !== "") {
         aircraftSelector.value = mySelection.get("aircraftId");
@@ -88,12 +49,16 @@ const displayChecklist = (aircrafts) => {
 
 aircraftSelector.addEventListener("change", function () {
     const aircraftSelected = this.value;
-    // console.log(this.value); // just to see if it works.
+    const aircraftName = this.value;
+    console.log(this.textContent); // just to see if it works.
+
 
     if (aircraftSelected !== "") {
         console.log(aircraftSelected);
-        testP.textContent = aircraftSelected; // where the magic begins!!!!
-        
+        // testP.textContent = aircraftSelected;
+        // ========== where the magic begins!!!! ========== 
+        h2.textContent = aircraftName;
+
 
 
 

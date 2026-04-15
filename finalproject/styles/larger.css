@@ -177,9 +177,16 @@
 
     /**************** MAIN ****************/
 
+    /* .checklist-page {
+        margin: 20px;
+    } */
     .checklist-page h1 {
         margin: 20px;
         /* color: var(--text-heading-lighter); */
+    }
+
+    .checklist-page > label {
+        margin-left: 20px;
     }
 
     .checklist-page .chekclistMainDiv {

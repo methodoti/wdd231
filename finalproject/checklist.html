@@ -51,17 +51,23 @@
             <label>Select aircarft <select class="buttons" id="select-aircraft">
                 <option value="">Choose a plane...</option>
             </select></label>
-            <p id="test">No selection</p>
+            <!-- <p id="test">No selection</p> -->
 
             <div class="chekclistMainDiv">
                 <!-- <section class="welcomeSection"> -->
-                <section class="categorySection">
+                <div class="categorySection">
+
+                    <!-- ======= CHECKLIST CATEGORY =========== -->
+                    <h2 class="aircraftName"></h2>
+                    <!-- RESET ALL -->
+                    <button class="resetAll buttons buttonsRounded">Reset All</button>
+
                     <div id="category-title" class="categoryTitleDiv cardTitle" aria-label="open and close">
-                    <h2 class="cardTitle">Pre Flight</h2>
+                    <h3 class="cardTitle">Pre Flight</h3>
                     <span id="category-button" class="categoryButton"></span>
                     </div>
                     <!-- ======= CHECKLIST DIV =========== -->
-                    <div id="checklist-div" class="show checklistDiv cards">
+                    <div id="checklist-div" class="checklistDiv cards">
 
                         <!-- ~~~~~~~~ Just to see the layout working ~~~~~~~~ -->
                         <div class="checklistItem type-checkpoint">
@@ -115,7 +121,7 @@
 
                         
                     </div>
-                </section>
+                </div>
             </div>
         </main>
 
