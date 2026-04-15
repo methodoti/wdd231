@@ -19,17 +19,22 @@ init();
 const displayChecklist = (aircrafts) => {
     aircrafts.forEach((plane) => {
         //console.log(plane);  //just to see individual plane, test to see if it works.
-        const div = document.createElement("div");
-        div.classList.add("buttons");
+        // const div = document.createElement("div");
+        // div.classList.add("buttons");
+        const linkButton = document.createElement("a");
+        linkButton.classList.add("buttons");
+        linkButton.href = `./checklist.html?aircraftId=${plane.aircraftId}`;
 
+
+        // button.textContent = plane.aircraftName;
         const p = document.createElement("p");
         p.textContent = plane.aircraftName;
 
-        div.addEventListener("click", function () {
-            console.log(plane.aircraftName);
-        })
+        // linkButton.addEventListener("click", function () {
+        //     console.log(plane.aircraftName);
+        // })
 
-        div.appendChild(p);
-        chooseDiv.appendChild(div);
+        linkButton.appendChild(p);
+        chooseDiv.appendChild(linkButton);
     });
 }
