@@ -11,7 +11,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=flight,keyboard_arrow_down,keyboard_arrow_up">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=check,flight,keyboard_arrow_down,keyboard_arrow_up">
         <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=flight_land" /> -->
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -56,13 +56,36 @@
             <div class="chekclistMainDiv">
                 <!-- <section class="welcomeSection"> -->
                 <section class="categorySection">
-                    <div class="categoryTitleDiv cardTitle">
+                    <div id="category-title" class="categoryTitleDiv cardTitle" aria-label="open and close">
                     <h2 class="cardTitle">Pre Flight</h2>
-                    <button id="category-button" class="categoryButton" aria-label="open close"></button>
+                    <span id="category-button" class="categoryButton"></span>
                     </div>
-                    <!-- <div class="welcomeDiv cards"> -->
-                    <div class="requestDiv cards">
-                        <p>Place Holder</p>
+                    <!-- ======= CHECKLIST DIV =========== -->
+                    <div id="checklist-div" class="show checklistDiv cards">
+
+
+                        <div class="checklistItem">
+                            <div class="check">
+                                <div class="checkIcon"></div>
+                            </div>
+                            <div class="item">
+                                <span class="type">BATERY</span>
+                                <div class="dot"></div>
+                                <span class="task">GUARD CLOSED</span>
+                            </div>
+                        </div>
+
+                        <div class="checklistItem">
+                            <div class="check">
+                                <div class="checkIcon"></div>
+                            </div>
+                            <div class="item">
+                                <span class="type">RTE PAGE 1/2</span>
+                                <div class="dot"></div>
+                                <span class="task">GUARD CLOSED</span>
+                            </div>
+                        </div>
+                        
                         
                     </div>
                 </section>

@@ -100,4 +100,37 @@ aircraftSelector.addEventListener("change", function () {
     }
 
 
- });
+});
+ 
+
+
+// TEMP! TESTE DOS CHECKLISTS
+
+// CATEGORY OPEN CLOSE
+const categoryTitleDiv = document.querySelector("#category-title")
+const categoryButton = document.querySelector("#category-button");
+const checklistDiv = document.querySelector("#checklist-div");
+
+// categoryButton.addEventListener("click", () => {
+//     categoryButton.classList.toggle("show");
+//     checklistDiv.classList.toggle("show");
+// })
+
+categoryTitleDiv.addEventListener("click", () => {
+    categoryButton.classList.toggle("show");
+    checklistDiv.classList.toggle("show");
+})
+
+
+
+// ITEM CHECKED
+const checklistItem = document.querySelector(".checklistItem")
+const checkIcon = document.querySelector(".checkIcon")
+const item = document.querySelector(".item");
+const dot = document.querySelector(".dot");
+
+checklistItem.addEventListener("click", () => {
+    checkIcon.classList.toggle("checked");
+    item.classList.toggle("checked");
+    dot.classList.toggle("checked");
+})

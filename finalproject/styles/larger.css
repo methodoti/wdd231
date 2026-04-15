@@ -209,6 +209,49 @@
         color: var(--text-primary);
         font-size: 2rem;
     }
+    .checklist-page .checklistDiv {
+        padding: 20px;
+    }
+
+
+    /*============= CHECKLIST ITEMS ============= */
+
+    .checklistItem {
+        grid-template-columns: 58px 1fr;
+    }
+
+    .check {
+        border: 2px solid var(--text-primary);
+        width: 38px;
+        height: 38px;
+        /* justify-self: center; */
+    }
+
+    .checkIcon {
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 38px;
+        width: 38px;
+        color: var(--cl-success);
+        font-size: 3rem;
+    }
+
+    .checkIcon.checked::before {
+        font-family: "Material Symbols Outlined";
+        content: "\e5ca";
+    }
+
+    .item {
+        font-size: 1.1rem;
+        font-weight: 600;
+        /* position: relative; */
+    }
+
 
     /*=========================================
         Add-Aircraft.HTML
