@@ -72,15 +72,16 @@
             atc - treat like checkpoint for now. 
     */
     /* type: checkpoint */
-    --cl-checkpoint: var(--c-platinum);
+    --cl-checkpoint: var(--c-pure-white);
     /* type: info */
     /* ==>>>> pensar melhor na cor depois <<<=== */
-    --cl-info: var(--c-tropical-teal);
+    --cl-info: #B8B8B8;
     /* ==>>>> será que posso usar o heading aqui? tipo um h3? <<<=== */
     /* type: subtitle */
-    --cl-subtitle: var(--c-tropical-teal);
+    --cl-subtitle: var(--c-amber-flame);
     /* type: sim-action */
-    --cl-sim-action: var(--c-pure-white);
+    --cl-sim-action: #00C2CC;
+    /* var(--c-pure-white); */
     /* type: ATC */
     --cl-atc: var(--c-amber-flame);
 
@@ -549,7 +550,8 @@ footer {
 }
 
 .check {
-    border: 1px solid var(--text-primary);
+    /* border: 1px solid var(--text-primary); */
+    border: 1px solid var(--cl-checkpoint);
     width: 10px;
     height: 10px;
     /* justify-self: center; */
@@ -570,8 +572,7 @@ footer {
     height: 4px;
     width: 4px;
     color: var(--cl-success);
-    font-size: 3rem;
-    /* border: 1px solid var(--c-laser-green); */
+    /* font-size: 3rem; */
     background-color: var(--cl-success);
 }
 
@@ -585,7 +586,8 @@ footer {
     align-items: center;
     justify-content: space-between;
     font-family: Doto, Arial, Helvetica, sans-serif;
-    color: var(--text-primary);
+    /* color: var(--text-primary); */
+    color: var(--cl-checkpoint);
     font-size: .9rem;
     font-weight: 600;
     /* position: relative; */
@@ -597,7 +599,8 @@ footer {
 .dot {
     font-family: Helvetica;
     height: 0;
-    border: 1px dashed var(--text-primary);
+    /* border: 1px dashed var(--text-primary); */
+    border: 1px dashed var(--cl-checkpoint);
     flex-grow: 1;
     margin: 10px 5px 0 5px
 }
@@ -605,9 +608,43 @@ footer {
     border: 1px dashed var(--cl-success);
 }
 
-.task {
+.action {
     text-align: left;
 }
+
+.item.type-info {
+    margin: 0 5px;
+    color: var(--cl-info);
+    /* font-weight: 500; */
+}
+.item.type-info div {
+    border: 1px dashed var(--cl-info);
+}
+
+.checklistItem.type-subtitle {
+    grid-template-columns: 1fr;
+}
+.item.type-subtitle {
+    /* text-align: center; */
+    justify-content: center;
+    color: var(--cl-subtitle);
+    /* font-size: 1rem; */
+    font-weight: 600;
+}
+
+
+
+.item.type-sim-action {
+    /* text-align: center; */
+    justify-content: center;
+    transform: translateX(-7px);
+    color: var(--cl-sim-action);
+    font-weight: 800;
+}
+/* .checklistItem.type-sim-action {
+    grid-template-columns: 1fr;
+} */
+
 /* .type, .task  {
     position: absolute;
     z-index: 2;

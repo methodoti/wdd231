@@ -93,6 +93,10 @@ aircraftSelector.addEventListener("change", function () {
     if (aircraftSelected !== "") {
         console.log(aircraftSelected);
         testP.textContent = aircraftSelected; // where the magic begins!!!!
+        
+
+
+
 
     } else {
         console.log("No plane selected");
