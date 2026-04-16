@@ -19,6 +19,13 @@ const categorySection = document.querySelector("#category-section");
 // for the aircraft data global
 let allAircraftData = [];
 
+// LOCAL STORAGE
+let virtualChecklistState = JSON.parse(localStorage.getItem('virtualChecklistState')) || {};
+
+function saveState() {
+    localStorage.setItem('virtualChecklistState', JSON.stringify(virtualChecklistState));
+}
+
 // function to initialize (need to be ASYNC to use AWAIT)
 async function init() {
     // ask for the data and wait (AWAIT) for the delivery
@@ -84,6 +91,13 @@ aircraftSelector.addEventListener("change", function () {
             checkedElements.forEach((element) => {
                 element.classList.remove("checked");
             });
+
+            // LOCAL STORAGE
+            const allItemsOnScreen = document.querySelectorAll("[data-id]");
+            allItemsOnScreen.forEach(el => {
+                virtualChecklistState[el.dataset.id] = false;
+            });
+            saveState();
         });
 
         categorySection.appendChild(h2);
@@ -123,49 +137,77 @@ aircraftSelector.addEventListener("change", function () {
             // === CATEGORY ===
             category.items.forEach((item) => {
                 // console.log(item);
+
+                // LOCAL STORAGE
+                const uniqueId = `${aircraftSelected}-${category.categoryName}-${item.task}`;
+                // const uniqueId = `${mySelection.get("aircraftId")}-${category.categoryName}-${item.task}`;
+
                 switch (item.type) {
-                    case "checkpoint":
+                    case "checkpoint": {
                         // console.log("isto é um CHECKPOINT");
                         let divTypeCheckpoint = document.createElement("div");
                         divTypeCheckpoint.classList.add("checklistItem", "type-checkpoint")
-                            let divCheck = document.createElement("div");
-                            divCheck.classList.add("check");
-                                let divCheckIcon = document.createElement("div");
-                                divCheckIcon.classList.add("checkIcon");
-                            divCheck.appendChild(divCheckIcon);
-                            let divItem = document.createElement("div");
-                            divItem.classList.add("item", "type-checkpoint");
-                                // TASK
-                               let spanTask = document.createElement("span");
-                                spanTask.classList.add("task");
-                                spanTask.textContent = item.task;
-                                 // DOT
-                                let divDot = document.createElement("div");
-                                divDot.classList.add("dot");
-                                // ACTION
-                                let spanAction = document.createElement("span");
-                                spanAction.classList.add("action");
-                                spanAction.textContent = item.action;
+
+                        // LOCAL STORAGE
+                        divTypeCheckpoint.dataset.id = uniqueId;
+
+                        let divCheck = document.createElement("div");
+                        divCheck.classList.add("check");
+                        
+                        let divCheckIcon = document.createElement("div");
+                        divCheckIcon.classList.add("checkIcon");
+                        divCheck.appendChild(divCheckIcon);
+                        
+                        let divItem = document.createElement("div");
+                        divItem.classList.add("item", "type-checkpoint");
+                        // TASK
+                        let spanTask = document.createElement("span");
+                        spanTask.classList.add("task");
+                        spanTask.textContent = item.task;
+                        // DOT
+                        let divDot = document.createElement("div");
+                        divDot.classList.add("dot");
+                        // ACTION
+                        let spanAction = document.createElement("span");
+                        spanAction.classList.add("action");
+                        spanAction.textContent = item.action;
                                 
-                            divItem.appendChild(spanTask);
-                            divItem.appendChild(divDot);
-                            divItem.appendChild(spanAction);
+                        divItem.appendChild(spanTask);
+                        divItem.appendChild(divDot);
+                        divItem.appendChild(spanAction);
+
+                        // LOCAL STORAGE
+                        if (virtualChecklistState[uniqueId]) {
+                            divCheckIcon.classList.add("checked");
+                            divItem.classList.add("checked");
+                            divDot.classList.add("checked");
+                        }
                         
                         divTypeCheckpoint.addEventListener("click", () => {
                             divCheckIcon.classList.toggle("checked");
                             divItem.classList.toggle("checked");
                             divDot.classList.toggle("checked");
+
+                            // LOCAL STORAGE
+                            virtualChecklistState[uniqueId] = divItem.classList.contains("checked");
+                            saveState();
                         })
+                        
                         
                         divTypeCheckpoint.appendChild(divCheck);
                         divTypeCheckpoint.appendChild(divItem);
 
                         divChecklistDiv.appendChild(divTypeCheckpoint);
                         break;
+                    }
                     case "info": {
                         // console.log("isto é um INFO");
                         let divTypeInfo = document.createElement("div");
                         divTypeInfo.classList.add("checklistItem", "type-info");
+
+                        // LOCAL STORAGE
+                        divTypeInfo.dataset.id = uniqueId;
+
                         let divCheck = document.createElement("div");
                         divCheck.classList.add("check");
                         let divCheckIcon = document.createElement("div");
@@ -188,11 +230,22 @@ aircraftSelector.addEventListener("change", function () {
                         divItem.appendChild(spanTask);
                         divItem.appendChild(divDot);
                         divItem.appendChild(spanAction);
+
+                        // LOCAL STORAGE
+                        if (virtualChecklistState[uniqueId]) {
+                            divCheckIcon.classList.add("checked");
+                            divItem.classList.add("checked");
+                            divDot.classList.add("checked");
+                        }
                         
                         divTypeInfo.addEventListener("click", () => {
                             divCheckIcon.classList.toggle("checked");
                             divItem.classList.toggle("checked");
                             divDot.classList.toggle("checked");
+
+                            // LOCAL STORAGE
+                            virtualChecklistState[uniqueId] = divItem.classList.contains("checked");
+                            saveState();
                         })
                         
                         divTypeInfo.appendChild(divCheck);
@@ -206,6 +259,10 @@ aircraftSelector.addEventListener("change", function () {
                         // console.log("isto é um SUBTITLE");
                         let divTypeSubtitle = document.createElement("div");
                         divTypeSubtitle.classList.add("checklistItem", "type-subtitle")
+
+                        // LOCAL STORAGE
+                        // divTypeCheckpoint.dataset.id = uniqueId;
+
                             // let divCheck = document.createElement("div");
                             // divCheck.classList.add("check");
                             //     let divCheckIcon = document.createElement("div");
@@ -225,9 +282,16 @@ aircraftSelector.addEventListener("change", function () {
                                 // spanAction.classList.add("action");
                                 // spanAction.textContent = item.action;
                                 
-                            divItem.appendChild(spanTask);
-                            // divItem.appendChild(divDot);
-                            // divItem.appendChild(spanAction);
+                        divItem.appendChild(spanTask);
+                        // divItem.appendChild(divDot);
+                        // divItem.appendChild(spanAction);
+                        
+                        // LOCAL STORAGE
+                        // if (virtualChecklistState[uniqueId]) {
+                            // divCheckIcon.classList.add("checked");
+                            // divItem.classList.add("checked");
+                            // divDot.classList.add("checked");
+                        // }
                         
                         // divTypeSubtitle.addEventListener("click", () => {
                         //     divCheckIcon.classList.toggle("checked");
@@ -245,6 +309,10 @@ aircraftSelector.addEventListener("change", function () {
                         // console.log("isto é um SIM-ACTION");
                         let divTypeSimAction = document.createElement("div");
                         divTypeSimAction.classList.add("checklistItem", "type-sim-action")
+
+                        // LOCAL STORAGE
+                        divTypeSimAction.dataset.id = uniqueId;
+
                             let divCheck = document.createElement("div");
                             divCheck.classList.add("check");
                                 let divCheckIcon = document.createElement("div");
@@ -268,10 +336,21 @@ aircraftSelector.addEventListener("change", function () {
                             // divItem.appendChild(divDot);
                             // divItem.appendChild(spanAction);
                         
+                        // LOCAL STORAGE
+                        if (virtualChecklistState[uniqueId]) {
+                            divCheckIcon.classList.add("checked");
+                            divItem.classList.add("checked");
+                            // divDot.classList.add("checked");
+                        }
+                        
                         divTypeSimAction.addEventListener("click", () => {
                             divCheckIcon.classList.toggle("checked");
                             divItem.classList.toggle("checked");
                             // divDot.classList.toggle("checked");
+
+                            // LOCAL STORAGE
+                            virtualChecklistState[uniqueId] = divItem.classList.contains("checked");
+                            saveState();
                         })
                         
                         divTypeSimAction.appendChild(divCheck);
@@ -284,6 +363,10 @@ aircraftSelector.addEventListener("change", function () {
                         // console.log("isto é um ATC");
                         let divTypeCheckpoint = document.createElement("div");
                         divTypeCheckpoint.classList.add("checklistItem", "type-checkpoint");
+
+                        // LOCAL STORAGE
+                        divTypeCheckpoint.dataset.id = uniqueId;
+
                             let divCheck = document.createElement("div");
                             divCheck.classList.add("check");
                                 let divCheckIcon = document.createElement("div");
@@ -307,10 +390,21 @@ aircraftSelector.addEventListener("change", function () {
                             divItem.appendChild(divDot);
                             divItem.appendChild(spanAction);
                         
+                        // LOCAL STORAGE
+                        if (virtualChecklistState[uniqueId]) {
+                            divCheckIcon.classList.add("checked");
+                            divItem.classList.add("checked");
+                            divDot.classList.add("checked");
+                        }
+                        
                         divTypeCheckpoint.addEventListener("click", () => {
                             divCheckIcon.classList.toggle("checked");
                             divItem.classList.toggle("checked");
                             divDot.classList.toggle("checked");
+
+                            // LOCAL STORAGE
+                            virtualChecklistState[uniqueId] = divItem.classList.contains("checked");
+                            saveState();
                         })
                         
                         divTypeCheckpoint.appendChild(divCheck);
@@ -348,6 +442,14 @@ aircraftSelector.addEventListener("change", function () {
                 checkedElements.forEach((element) => {
                     element.classList.remove("checked");
                 });
+
+                // LOCAL STORAGE: clean only for this category
+                const itensDestaCategoria = divChecklistDiv.querySelectorAll("[data-id]");
+                itensDestaCategoria.forEach(el => {
+                    virtualChecklistState[el.dataset.id] = false;
+                });
+                saveState();
+
             });
 
             resetDiv.appendChild(buttonReset);
@@ -394,6 +496,13 @@ aircraftSelector.addEventListener("change", function () {
             checkedElements.forEach((element) => {
                 element.classList.remove("checked");
             });
+            
+            // LOCAL STORAGE
+            const allItemsOnScreen = document.querySelectorAll("[data-id]");
+            allItemsOnScreen.forEach(el => {
+                virtualChecklistState[el.dataset.id] = false;
+            });
+            saveState();
         });
         categorySection.appendChild(buttonResetAllFinal);
 
