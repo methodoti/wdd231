@@ -15,13 +15,16 @@ const aircraftSelector = document.querySelector("#select-aircraft");
 // const testP = document.querySelector("#test");
 const h2 = document.querySelector("h2");
 
-
+// for the aircraft data global
+let allAircraftData = [];
 
 // function to initialize (need to be ASYNC to use AWAIT)
 async function init() {
     // ask for the data and wait (AWAIT) for the delivery
     const aircrafts = await getChecklistData();
     // now, with the data returned, display on screen
+    allAircraftData = aircrafts;
+    console.log(allAircraftData);
     displayChecklist(aircrafts);
 }
 
@@ -57,11 +60,9 @@ aircraftSelector.addEventListener("change", function () {
         console.log(aircraftSelected);
         // testP.textContent = aircraftSelected;
         // ========== where the magic begins!!!! ========== 
-        h2.textContent = aircraftName;
-
-
-
-
+        const plane = allAircraftData.find(p => p.aircraftId === aircraftSelected)
+        console.log(plane);
+        h2.textContent = plane.aircraftName;
 
     } else {
         console.log("No plane selected");
