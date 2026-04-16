@@ -673,6 +673,10 @@ footer {
     color: var(--cl-subtitle);
     /* font-size: 1rem; */
     font-weight: 600;
+    cursor: default;
+}
+.item.type-atc {
+    color: var(--cl-atc);
 }
 
 
