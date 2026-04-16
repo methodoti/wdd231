@@ -185,6 +185,10 @@
         /* color: var(--text-heading-lighter); */
     }
 
+    .checklist-page h2 {
+        margin: 20px;
+    }
+
     .checklist-page > label {
         margin-left: 20px;
     }
@@ -198,6 +202,10 @@
         gap: 20px;
         /* border: 1px dashed green; */
     }
+
+
+
+
 
     .checklist-page .categoryTitleDiv {
         /* background-color: red; */
@@ -275,6 +283,15 @@
     .item.type-sim-action {
         transform: translateX(-29px);
     }
+
+    /* .reset {
+        margin-top: 20px;
+    } */
+
+
+
+
+
 
 
 
