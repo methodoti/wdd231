@@ -25,7 +25,7 @@ async function init() {
     const aircrafts = await getChecklistData();
     // now, with the data returned, display on screen
     allAircraftData = aircrafts;
-    console.log(allAircraftData);
+    // console.log(allAircraftData);
     displayChecklist(aircrafts);
 }
 
