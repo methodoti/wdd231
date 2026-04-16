@@ -72,6 +72,17 @@ aircraftSelector.addEventListener("change", function () {
         const plane = allAircraftData.find(p => p.aircraftId === aircraftSelected)
         // console.log(plane);
         
+        // SAVE THE DATE OF LAST FLIGHT
+        function registerLastFlight() {
+            const currentDate = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            const lastFlight = {
+                id: plane.aircraftId,
+                name: plane.aircraftName,
+                date: currentDate
+            };
+            localStorage.setItem("lastFlight", JSON.stringify(lastFlight));
+        }
+
         let h2 = document.createElement("h2");
         h2.classList.add("aircraftName");
         h2.textContent = plane.aircraftName;
@@ -191,6 +202,9 @@ aircraftSelector.addEventListener("change", function () {
                             // LOCAL STORAGE
                             virtualChecklistState[uniqueId] = divItem.classList.contains("checked");
                             saveState();
+
+                            // SAVE THE DATE OF LAST FLIGHT
+                            registerLastFlight();
                         })
                         
                         
@@ -246,6 +260,9 @@ aircraftSelector.addEventListener("change", function () {
                             // LOCAL STORAGE
                             virtualChecklistState[uniqueId] = divItem.classList.contains("checked");
                             saveState();
+
+                            // SAVE THE DATE OF LAST FLIGHT
+                            registerLastFlight();
                         })
                         
                         divTypeInfo.appendChild(divCheck);
@@ -351,6 +368,9 @@ aircraftSelector.addEventListener("change", function () {
                             // LOCAL STORAGE
                             virtualChecklistState[uniqueId] = divItem.classList.contains("checked");
                             saveState();
+
+                            // SAVE THE DATE OF LAST FLIGHT
+                            registerLastFlight();
                         })
                         
                         divTypeSimAction.appendChild(divCheck);
@@ -405,6 +425,9 @@ aircraftSelector.addEventListener("change", function () {
                             // LOCAL STORAGE
                             virtualChecklistState[uniqueId] = divItem.classList.contains("checked");
                             saveState();
+
+                            // SAVE THE DATE OF LAST FLIGHT
+                            registerLastFlight();
                         })
                         
                         divTypeCheckpoint.appendChild(divCheck);

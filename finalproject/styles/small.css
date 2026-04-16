@@ -397,9 +397,9 @@ footer {
 }
 
 .home-page .lastflightImg div {
-    height: 52px;
-    width: 128px;
-    border: 1px dashed green;
+    /* height: 52px;
+    width: 128px; */
+    /* border: 1px dashed green; */
 }
 
 .home-page .lastflightAircraft p {

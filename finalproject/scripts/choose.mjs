@@ -38,3 +38,26 @@ const displayChecklist = (aircrafts) => {
         chooseDiv.appendChild(linkButton);
     });
 }
+
+
+const lastFlightData = JSON.parse(localStorage.getItem("lastFlight"));
+const lastflightSection = document.querySelector(".lastflightSection");
+
+if (lastFlightData) {
+    // If there is a flight, update the text.
+    document.querySelector("#last-aircraft").textContent = lastFlightData.name;
+    document.querySelector("#last-date").textContent = lastFlightData.date;
+    
+    // call the image to the div.
+    const imgDiv = document.querySelector("#lasflight-img");
+    imgDiv.style.backgroundImage = `url('images/${lastFlightData.id}.webp')`;
+    imgDiv.style.backgroundSize = "cover";
+    imgDiv.style.backgroundPosition = "center";
+} else {
+    // Se for a primeira visita do usuário e não tiver voo salvo, esconde a seção para não ficar vazia
+    // if(lastflightSection) lastflightSection.style.display = "none";
+
+    document.querySelector("#last-aircraft").textContent = "No flight!"
+    document.querySelector("#last-date").textContent = "";
+    // imgDiv.style.backgroundImage = ``;
+}
