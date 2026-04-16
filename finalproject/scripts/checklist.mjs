@@ -68,6 +68,7 @@ aircraftSelector.addEventListener("change", function () {
         let h2 = document.createElement("h2");
         h2.classList.add("aircraftName");
         h2.textContent = plane.aircraftName;
+        document.title = `${plane.aircraftName} | Virtual Checklist | `;
         
 
         let buttonResetAll = document.createElement("button");
@@ -398,6 +399,7 @@ aircraftSelector.addEventListener("change", function () {
 
     } else {
         console.log("No plane selected");
+        document.title = `Aircraft Checklists | Virtual Checklist`;
         // h2.textContent = "No selection";
     }
 
