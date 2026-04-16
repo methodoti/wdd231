@@ -63,7 +63,7 @@ aircraftSelector.addEventListener("change", function () {
         // console.log(aircraftSelected);
         // ========== where the magic begins!!!! ========== 
         const plane = allAircraftData.find(p => p.aircraftId === aircraftSelected)
-        console.log(plane);
+        // console.log(plane);
         
         let h2 = document.createElement("h2");
         h2.classList.add("aircraftName");
@@ -78,7 +78,11 @@ aircraftSelector.addEventListener("change", function () {
 
         buttonResetAll.addEventListener("click", () => { // add event listener to the current button
             // displayCourseDetails(filteredCourses[index])
-            console.log("teste de click Reset All Inicio");
+            // console.log("teste de click Reset All Inicio");
+            const checkedElements = document.querySelectorAll(".checked");
+            checkedElements.forEach((element) => {
+                element.classList.remove("checked");
+            });
         });
 
         categorySection.appendChild(h2);
@@ -86,7 +90,7 @@ aircraftSelector.addEventListener("change", function () {
         
         
         plane.checklists.forEach((category) => {
-            console.log(category.categoryName);
+            // console.log(category.categoryName);
 
             // ===== div categoryTitleDiv =====
             let divCategoryTitleDiv = document.createElement("div");
@@ -337,8 +341,12 @@ aircraftSelector.addEventListener("change", function () {
             buttonReset.textContent = "Reset";
 
             buttonReset.addEventListener("click", () => { // add event listener to the current button
-                // displayCourseDetails(filteredCourses[index])
-                console.log("teste de click Reset do checklist");
+                
+                // look for checked only on div
+                const checkedElements = divChecklistDiv.querySelectorAll(".checked");
+                checkedElements.forEach((element) => {
+                    element.classList.remove("checked");
+                });
             });
 
             resetDiv.appendChild(buttonReset);
@@ -379,7 +387,12 @@ aircraftSelector.addEventListener("change", function () {
 
         buttonResetAllFinal.addEventListener("click", () => { // add event listener to the current button
             // displayCourseDetails(filteredCourses[index])
-            console.log("teste de click Reset All FINAL");
+            // console.log("teste de click Reset All FINAL");
+            // look for checked on all page
+            const checkedElements = document.querySelectorAll(".checked");
+            checkedElements.forEach((element) => {
+                element.classList.remove("checked");
+            });
         });
         categorySection.appendChild(buttonResetAllFinal);
 

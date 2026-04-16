@@ -203,7 +203,9 @@
         /* border: 1px dashed green; */
     }
 
-
+    .resetAll {
+        margin: 15px 15px 0 15px;
+    }
 
 
 
@@ -212,6 +214,8 @@
         display: grid;
         grid-template-columns: 1fr 29px;
         padding: 0 20px;
+        /* teste de margin */
+        margin-top: 15px;
     }
 
     /* ---- BUTTON ---- */
