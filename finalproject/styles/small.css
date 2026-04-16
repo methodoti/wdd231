@@ -376,6 +376,8 @@ footer {
     grid-template-columns: 1fr;
     gap: 10px;
     /* border: 1px dashed green; */
+    color: #ffffff;
+
 }
 
 
