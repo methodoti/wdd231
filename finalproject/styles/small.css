@@ -121,7 +121,8 @@ header, main, nav, footer {
     color: var(--text-heading-light);
     height: 34px;
     padding-left: 10px;
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
+    font-size: 1rem;
     margin: 0;
 }
 
@@ -513,7 +514,9 @@ footer {
     border: none;
     font-family: sans-serif;
     font-weight: bold;
-    width: 350px;
+    min-width: 250px;
+    width: 90%;
+    max-width: 350px;
     margin: 10px 10px 0px 10px;
     align-self: center;
     /* justify-content: center; */
